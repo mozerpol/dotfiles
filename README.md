@@ -1,5 +1,4 @@
-
-go](https://neovim.io/images/logo@2x.png) 
+![logo](https://neovim.io/images/logo@2x.png) 
 # My own config
 
 I created this description mainly for me - for future, if I want to recreate my own work.
