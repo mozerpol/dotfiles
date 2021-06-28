@@ -1,6 +1,11 @@
 ## Configs-Settings
-Link: https://github.com/mozerpol/Configs-Settings
+I'm a user of linux based systems, so it's natural to use the cli apps sometimes. Because of this I have a problem to remember every shortcut. So I created this repo to save my own configs and (if it's necessary) list the most important for me shortcuts.
+_____________
 
-This repo is for my own configs with the necessary descriptions.
-1. Conky
-2. NeoVim
+
+1. *Conky* - lightweight desktop system monitor
+2. *NeoVim* - *Vim* fork
+3. Translator in cli using *Translate Shell*
+4. *Glow* - markdown reader in cli
+5. *mps-youtube* - youtube in cli
+6. *tmux* - terminal multiplexer
