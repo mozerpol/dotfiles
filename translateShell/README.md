@@ -16,7 +16,7 @@ The most useful things (for me of course ;p):
 `trans :pl "My home is`
 `> where my ass."` <-- translate into Polish this sentence. Just press *enter* during writing, the end of sentence is marked by *"* sign.
 
-**Brief mode** - to see only the most relevant translation
+**Brief mode** - to see only the most relevant translation <br/>
 trans -b :fr "Saluton, Mondo" <-- just add "*-b*" option
 
 **Translate a Web Page**
