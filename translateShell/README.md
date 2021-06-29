@@ -15,7 +15,7 @@ The most useful things (for me of course ;p):
 `> where my ass."` <-- translate into Polish this sentence. Just press *enter* during writing, the end of sentence is marked by *"* sign. <br/>
 
 **Brief mode** - to see only the most relevant translation <br/>
-trans -b :fr "Saluton, Mondo" <-- just add "*-b*" option <br/>
+trans -b :fr "Saluton, Mondo" <-- just add "*-b*" option<br/>
 
 **Translate a Web Page** </br>
 trans :pl http://www.w3.org/ <br/>
