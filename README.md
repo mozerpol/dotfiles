@@ -6,6 +6,6 @@ _____________
 1. *Conky* - lightweight desktop system monitor
 2. *NeoVim* - *Vim* fork
 3. Translator in cli using *Translate Shell*
-4. *Glow* - markdown reader in cli
+4. *grip* - markdown reader with web browser
 5. *mps-youtube* - youtube in cli
 6. *tmux* - terminal multiplexer
