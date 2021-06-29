@@ -18,5 +18,5 @@ The most useful things (for me of course ;p):
 trans -b :fr "Saluton, Mondo" <-- just add "*-b*" option <br/>
 
 **Translate a Web Page** </br>
-trans :pl http://www.w3.org/
+trans :pl http://www.w3.org/ <br/>
 
