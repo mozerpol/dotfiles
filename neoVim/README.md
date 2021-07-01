@@ -77,8 +77,36 @@ Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br
 Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
 And of course install.
 
+### Most important shortcuts
 
-
+| Shortcut | Meaning |
+|--|:--|
+| *h, j, k, l* | navigation, instead of arrows |
+| *u* | undo |
+| *:q!* | exit without saving |
+| *x* | delete sign under cursor |
+| *i* | entering into insert mode |
+| *shift + a* | writing at the end of the line |
+| *w* | jump to the end if the word |
+| *dw* | delete the entire word |
+| *d$* | delete all words to the end of line |
+| *de* | delete the entire word up to space |
+| *zw* | skip forward two words and set cursor at the beginning of next word |
+| *3e* | skip forward three words and set cursor on the end of next word |
+| *d2w* | delete two words |
+| *dd* | delete entire line |
+| *2dd* | delete two entire lines |
+| *ctrl + r* | ctrl + y |
+| *p* | undo *dd* action |
+| *r* | replace |
+| *ce* | delete to the end of word |
+| *ctrl + g* | shows how many percent of the document has passed |
+| */* | find word |
+| *:!* | execute external command |
+| *gg* | place the cursor at the very top of the document |
+| *:w* | save |
+| *j* | copy what the cursor pointing at |
+| *p* | paste |
 
 ### What is init.vim
 Plugins should be between *call* 
