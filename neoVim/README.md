@@ -24,7 +24,7 @@ After changing user (can be root for example) nvim looks different. It is obviou
 
 Vim has other modes, like Visual, Select, and Ex-Mode
 
-### Step by step
+### *vim-plug*
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier to install plugins: <br/>
 For neovim: ```sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'```
@@ -48,6 +48,20 @@ So as I wrote, *vim-plug* is a plugin for easier installation other plugins for 
 - Check the plugin status: `:PlugStatus`
 - Upgrade vim-plug itself: `:PlugUpgrade`
 
+Project website: `https://github.com/junegunn/vim-plug`
+
+### *vim-airline*
+*vim-airline* is a status bar, which can be customized. <br/>
+
+**How to install?** <br/>
+To `~/.config/nvim/init.vim` add `Plug 'vim-airline/vim-airline'`, between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
+Next run *nvim* and type `:PlugInstall`. <br/> 
+After this in dir `/home/mozerpol/.local/share/nvim/plugged` will be create folder *vim-airline* with necessary files. <br/>
+To add more themes put in *init.vim* line `Plugin 'vim-airline/vim-airline-themes'` and install it. <br/>
+Thanks to this you can use `let g:airline_theme='minimalist'`, which is nice theme :D <br/>
+Put line `let g:airline_theme='minimalist'` **after** (not between) `call plug#end()`.
+
+Project website: https://github.com/vim-airline/vim-airline
 
 ### What is init.vim
 Plugins should be between *call* 
