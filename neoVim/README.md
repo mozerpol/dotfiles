@@ -61,7 +61,24 @@ To add more themes put in *init.vim* line `Plugin 'vim-airline/vim-airline-theme
 Thanks to this you can use `let g:airline_theme='minimalist'`, which is nice theme :D <br/>
 Put line `let g:airline_theme='minimalist'` **after** (not between) `call plug#end()`.
 
+Also we can put line `let g:airline#extensions#tabline#enabled = 1` <br/>
+Thanks to this we'll se in upper bar status about tabs.
+
+Additional options for *airline*:
+- enable modified detection: `let g:airline_detect_modified=:1`
+- enable paste detection: `let g:airline_detect_paste=1`
+- enable spell detection: `let g:airline_detect_spell=1`
+- display spelling language when spell detection is enabled: `let g:airline_detect_spelllang=1`
+
 Project website: https://github.com/vim-airline/vim-airline
+
+### *auto-pairs*
+Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
+Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
+And of course install.
+
+
+
 
 ### What is init.vim
 Plugins should be between *call* 
