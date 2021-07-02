@@ -32,30 +32,83 @@ Paste the selected text: `ctrl + b` and `]`
 ### Customizing 
 *Tmux* reads its configuration from `~/.tmux.conf` <br/>
 If config doesn't exist, you can create it. <br/>
-To install plugins: `ctrl + shift + i`
+To install plugins: `ctrl + shift + i`, but in this project I'm not using any plugin for tmux.
 
+Reload config using `ctrl + b` and `r`: <br/>
 ```
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+```
+
+Open in new split tab .tmux.conf: `ctrl + b` and `shift + m`: <br/>
+```
 bind-key M split-window -h "nvim ~/.tmux.conf"
 ```
-Thanks to this we can: <br/>
-Reload config: `ctrl + b` and `r` <br/>
-Open in new split tab *.tmux.conf*: `ctrl + b` and `shift + m`
 
-Mouse mode: <br/>
-`set -g mouse on` <br/>
-We can select windows and different panels by clicking on them and what is very important (for me) we can resize panles! <br/>
+Thanks to mouse mode we can select windows and different panels by clicking on them and what is very important (for me) we can resize panles! <br/>
+```set -g mouse on``` <br/>
 
-My config is very modest, but enough for me :) <br/>
+Change color of inactive/active window: <br/>
 ```
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=black'
+```
+
+Setting the pane border colors: <br/> 
+```
+set -g pane-border-style 'fg=colour235,bg=colour238' 
+set -g pane-active-border-style 'fg=colour151,bg=colour238'
+```
+
+Change the colors of the bottom bar: <br/>
+```
+set -g status-bg colour240
+set -g status-fg colour248
+```
+
+Change color during selection text: <br/>
+```
+set -wg mode-style fg=colour138
+```
+
+| |
+|:--:|
+| ![Screenshot_2021-07-02 Screenshot at 2021-07-02 20-23-49 png (PNG Image, 3286 × 1200 pixels) – Scaled (58%)](https://user-images.githubusercontent.com/43972902/124315141-c94e3580-db73-11eb-95c4-cda78616d514.png) |
+| The final appearance of the terminal window divided into three parts, with the text selected. |
+
+### Config
+Below is my complete config, which is very modest, but enough for me :) <br/>
+```
+# For reload config
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+
+# For easier access to config
 bind-key M split-window -h "nvim ~/.tmux.conf"
-set -g history-limit 5000
-setw -g automatic-rename on   # rename window to reflect current program
+
+# Larger history
+set -g history-limit 5000 
+
+# Rename window to reflect current program
+setw -g automatic-rename on
 
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on
+
+# Set inactive/active window styles
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=black'
+
+# Set the pane border colors 
+set -g pane-border-style 'fg=colour235,bg=colour238' 
+set -g pane-active-border-style 'fg=colour151,bg=colour238'
+
+# Change the colors of the bottom bar
+set -g status-bg colour240
+set -g status-fg colour248
+
+# Change selection color
+set -wg mode-style fg=colour138
 ```
+
 
 
 
