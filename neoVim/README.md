@@ -27,9 +27,11 @@ Vim has other modes, like Visual, Select, and Ex-Mode
 ### *vim-plug*
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
 to install plugins: <br/>
-For neovim: 
-```sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'```
+For neovim: <br/>
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ 
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
 
 This command will create config file for plugin *plug.vim* in directory: 
 *~/.local/share/nvim/site/autoload/plug.vim*. <br/>
@@ -88,7 +90,8 @@ Project website: https://github.com/vim-airline/vim-airline
 
 ### *auto-pairs*
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
-Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
+Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between 
+`call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
 And of course install.
 
 ### Settings
