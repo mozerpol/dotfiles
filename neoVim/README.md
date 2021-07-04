@@ -27,10 +27,9 @@ Vim has other modes, like Visual, Select, and Ex-Mode
 ### *vim-plug*
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
 to install plugins: <br/>
-For neovim: <br/>
+For neovim: 
 ```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ 
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 This command will create config file for plugin *plug.vim* in directory: 
@@ -90,13 +89,76 @@ Project website: https://github.com/vim-airline/vim-airline
 
 ### *auto-pairs*
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
-Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between 
-`call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
+Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
 And of course install.
 
-### Settings
+### Yggdroot/indentLine 
+Plugin for displaying vertical lines at each indentation level for code 
+indented with spaces. This plugin not support indentations with tabs, because
+you can just use `set list lcs=tab:\¦\ `.
 
-Set the vertical line to position 80 <br/>
+To install: Plug `'Yggdroot/indentLine'` and `:PlugInstall` <br/>
+
+To turn on plugin add: <br/>
+`let g:indentLine_enabled = 1` <br/>
+If you want turn off plugin, just: <br/>
+`let g:indentLine_enabled = 0` <br/>
+
+##### What does mean indent level: <br/>
+It's the first indent level: <br/>
+```
+int main()
+{
+	return 0;
+}
+```
+It's the second indent level: <br/>
+```
+int main()
+{
+	if(variable1)
+	{
+		return 1;
+	}
+	
+	return 0;
+}
+```
+It's the third indent level: <br/>
+```
+int main()
+{
+	if(variable1)
+	{
+		if(variable2)
+		{
+			return 2;
+		}
+
+		return 1;
+	}
+
+	return 0;
+}
+```
+etc.
+
+To show first indent level: <br/>
+`let g:indentLine_showFirstIndentLevel = 1` <br/>
+In my case the first indent level was turned off.
+
+Show up to ten level indents: <br/>
+`let g:indentLine_indentLevel = 10`
+
+This plugin not support indentations with tabs, so in this case we must use: <br/>
+`set list lcs=tab:\¦\ `, and remeber, after "\¦\ " is space on the end. <br/>
+To change color for tab indents use: <br/>
+
+Project website: https://github.com/Yggdroot/indentLine
+
+### Other settings
+
+Set the vertical line to position 80: <br/>
 ```
 highlight ColorColumn ctermbg=gray
 set colorcolumn=80
@@ -104,6 +166,7 @@ set colorcolumn=80
 
 Set line numbering: <br/>
 ```set number```
+
 
 
 
