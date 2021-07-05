@@ -3,6 +3,7 @@
 ---
 ### How to install neovim:
 `sudo apt install neovim` <br/>
+For all plugins to correct work you need neovim version > 0.5. <br/>
 
 ### Important directories/files:
 If they (folders and files) don't exist, create them.
@@ -180,10 +181,10 @@ vertical indentations for spaces, tabs and also for empty lines. <br/>
 To install: `Plug 'lukas-reineke/indent-blankline.nvim'` and `:PlugInstall`.
 
 ##### What did I use
-For for first indent lines set different sign. <br/>
+I sat for four first indent lines different signs. <br/>
 First vertical indentation consists of `|` sign. <br/>
 Second vertical indentation consists of `¦` sign <br/>
-Third... etc.
+Third... etc:
 ```
 let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
 ```
@@ -193,19 +194,36 @@ Show up to ten level indents: <br/>
 let g:indent_blankline_indent_level = 10
 ```
 
-
 Show first indent level. In my case the first indent level was turned off. To
 turn on use: <br/>
 ```
 let g:indent_blankline_show_first_indent_level = v:true
 ```
 
-It's much harder to explain without photo. Below option is just appearance. <br/>
+For this option is much harder to explain without photo. Below option is related 
+with only appearance. <br/>
 ```
 let g:indent_blankline_show_trailing_blankline_indent = v:false
 ```
 
+Project website: https://github.com/lukas-reineke/indent-blankline.nvim
 
+### 'folke/tokyonight.nvim'
+A dark and light Neovim theme ported from the Visual Studio Code TokyoNight theme.
+
+##### How to install
+To install: `Plug 'folke/tokyonight.nvim'` and `:PlugInstall`.
+
+##### What did I use
+In my opinion, the most important things were enabled by default, such as italic
+comments or *NvimTree* has a darker background. <br/>
+To my config I included only: <br/>
+```
+colorscheme tokyonight
+```
+This turn on a *tokyonight* colorscheme, which for me is nice. 
+
+Project website: https://github.com/folke/tokyonight.nvim 
 
 ### Other settings
 
