@@ -1,9 +1,8 @@
 ![logo](https://neovim.io/images/logo@2x.png) 
 
 ---
-### How to install:
+### How to install neovim:
 `sudo apt install neovim` <br/>
-Must have: python3
 
 ### Important directories/files:
 If they (folders and files) don't exist, create them.
@@ -14,7 +13,7 @@ If they (folders and files) don't exist, create them.
 After changing user (can be root for example) nvim looks different. 
 It is obvious, the dir for config is different.
 
-### Modes
+### Modes in vim/nvim
 
 |**Mode**|**Description**|
 |:--:|:--:|
@@ -22,11 +21,13 @@ It is obvious, the dir for config is different.
 |Insert|For explicitly inserting and modifying text|
 |Command Line|For operations like saving, exiting, etc.|
 
-Vim has other modes, like Visual, Select, and Ex-Mode
+Vim has other modes, like Visual, Select, and Ex-Mode, more [here](#https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes).
 
 ### *vim-plug*
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
-to install plugins: <br/>
+to install plugins.
+
+##### How to install
 For neovim: 
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -70,13 +71,15 @@ After this in dir `/home/mozerpol/.local/share/nvim/plugged` will be create
 folder *vim-airline* with necessary files. <br/>
 To add more themes put in *init.vim* line
 `Plugin 'vim-airline/vim-airline-themes'` and install it. <br/>
-Thanks to this you can use `let g:airline_theme='minimalist'`, which is nice
+
+##### What did I use
+Thanks to `'vim-airline/vim-airline-themes'` I can use `let g:airline_theme='minimalist'`, which is nice
 theme :D <br/>
 Put line `let g:airline_theme='minimalist'` **after** (not between)
 `call plug#end()`.
 
 Also we can put line `let g:airline#extensions#tabline#enabled = 1` <br/>
-Thanks to this we'll se in upper bar status about tabs.
+Thanks to this we'll see in upper bar status about tabs.
 
 Additional options for *airline*:
 - enable modified detection: `let g:airline_detect_modified=:1`
@@ -92,11 +95,23 @@ Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br
 Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
 And of course install.
 
+##### How to install
+
+##### What did I use
+
+Project website:
+
 ### Yggdroot/indentLine 
-Plugin for displaying vertical lines at each indentation level for code 
+At the beggining I thought this plugin would be a good choice. It is very popular,
+but I had a big problem. I doesn't show colors of indent in blank line. So I
+decided to use another one, which I describe below. Anyway I started describe this, so
+I'll save it, becuse it's my hard work ;) <br/>
+So... About *Yggdroot/indentLine*, which I ultimately didn't use. <br/> 
+This plugin is for displaying vertical lines at each indentation level for code 
 indented with spaces. This plugin not support indentations with tabs, because
 you can just use `set list lcs=tab:\¦\ `.
 
+##### How to install
 To install: Plug `'Yggdroot/indentLine'` and `:PlugInstall` <br/>
 
 To turn on plugin add: <br/>
@@ -143,6 +158,7 @@ int main()
 ```
 etc.
 
+#####
 To show first indent level: <br/>
 `let g:indentLine_showFirstIndentLevel = 1` <br/>
 In my case the first indent level was turned off.
@@ -156,6 +172,14 @@ To change color for tab indents use: <br/>
 
 Project website: https://github.com/Yggdroot/indentLine
 
+### lukas-reineke/indent-blankline.nvim
+This is impoved version of *Yggdroot/indentLine*. Thanks to this, we can see 
+vertical indentations for spaces, tabs and also for empty lines. <br/>
+
+#### How to install
+
+#### What did I use
+
 ### Other settings
 
 Set the vertical line to position 80: <br/>
@@ -165,7 +189,9 @@ set colorcolumn=80
 ```
 
 Set line numbering: <br/>
-```set number```
+```
+set number
+```
 
 
 
