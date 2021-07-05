@@ -92,10 +92,10 @@ Project website: https://github.com/vim-airline/vim-airline
 
 ### *auto-pairs*
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
-Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
-And of course install.
 
 ##### How to install
+Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
+And of course install.
 
 ##### What did I use
 
@@ -176,9 +176,36 @@ Project website: https://github.com/Yggdroot/indentLine
 This is impoved version of *Yggdroot/indentLine*. Thanks to this, we can see 
 vertical indentations for spaces, tabs and also for empty lines. <br/>
 
-#### How to install
+##### How to install
+To install: `Plug 'lukas-reineke/indent-blankline.nvim'` and `:PlugInstall`.
 
-#### What did I use
+##### What did I use
+For for first indent lines set different sign. <br/>
+First vertical indentation consists of `|` sign. <br/>
+Second vertical indentation consists of `¦` sign <br/>
+Third... etc.
+```
+let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
+```
+
+Show up to ten level indents: <br/>
+```
+let g:indent_blankline_indent_level = 10
+```
+
+
+Show first indent level. In my case the first indent level was turned off. To
+turn on use: <br/>
+```
+let g:indent_blankline_show_first_indent_level = v:true
+```
+
+It's much harder to explain without photo. Below option is just appearance. <br/>
+```
+let g:indent_blankline_show_trailing_blankline_indent = v:false
+```
+
+
 
 ### Other settings
 
