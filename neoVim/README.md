@@ -22,7 +22,7 @@ It is obvious, the dir for config is different.
 |Insert|For explicitly inserting and modifying text|
 |Command Line|For operations like saving, exiting, etc.|
 
-Vim has other modes, like Visual, Select, and Ex-Mode, more [here](#https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes).
+Vim has other modes, like Visual, Select, and Ex-Mode, more [here](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes).
 
 ### *vim-plug*
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
@@ -91,7 +91,7 @@ Additional options for *airline*:
 
 Project website: https://github.com/vim-airline/vim-airline
 
-### *auto-pairs*
+### auto-pairs
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
 
 ##### How to install
@@ -100,7 +100,7 @@ And of course install.
 
 ##### What did I use
 
-Project website:
+Project website: https://github.com/jiangmiao/auto-pairs
 
 ### Yggdroot/indentLine 
 At the beggining I thought this plugin would be a good choice. It is very popular,
@@ -122,14 +122,14 @@ If you want turn off plugin, just: <br/>
 
 ##### What does mean indent level: <br/>
 It's the first indent level: <br/>
-```
+```cpp
 int main()
 {
 	return 0;
 }
 ```
 It's the second indent level: <br/>
-```
+```cpp
 int main()
 {
 	if(variable1)
@@ -141,7 +141,7 @@ int main()
 }
 ```
 It's the third indent level: <br/>
-```
+```cpp
 int main()
 {
 	if(variable1)
@@ -185,26 +185,19 @@ I sat for four first indent lines different signs. <br/>
 First vertical indentation consists of `|` sign. <br/>
 Second vertical indentation consists of `¦` sign <br/>
 Third... etc:
-```
-let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
-```
+`let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']`
 
 Show up to ten level indents: <br/>
-```
-let g:indent_blankline_indent_level = 10
-```
+`let g:indent_blankline_indent_level = 10`
 
 Show first indent level. In my case the first indent level was turned off. To
 turn on use: <br/>
-```
-let g:indent_blankline_show_first_indent_level = v:true
-```
+`let g:indent_blankline_show_first_indent_level = v:true`
+
 
 For this option is much harder to explain without photo. Below option is related 
 with only appearance. <br/>
-```
-let g:indent_blankline_show_trailing_blankline_indent = v:false
-```
+`let g:indent_blankline_show_trailing_blankline_indent = v:false`
 
 Project website: https://github.com/lukas-reineke/indent-blankline.nvim
 
@@ -218,12 +211,35 @@ To install: `Plug 'folke/tokyonight.nvim'` and `:PlugInstall`.
 In my opinion, the most important things were enabled by default, such as italic
 comments or *NvimTree* has a darker background. <br/>
 To my config I included only: <br/>
-```
-colorscheme tokyonight
-```
+`colorscheme tokyonight`
+
 This turn on a *tokyonight* colorscheme, which for me is nice. 
 
 Project website: https://github.com/folke/tokyonight.nvim 
+
+### NERDTree
+The NERDTree is a file system explorer for the Vim editor. <br/>
+To use, just write `:NERDTree`.
+
+##### How to install
+To install: `Plug 'preservim/nerdtree'` and `:PlugInstall`. 
+After installing *NERDTree*, the best way to learn it is to turn on the 
+Quick Help. Open *NERDTree* with the `:NERDTree` command, and press `?` to turn
+on the Quick Help.
+
+##### What did I use
+Ok, this plugin is very expanded, so at this moment, bit by bit I'll develop
+this part. Gradually I'll add some shortcuts, plugins for *nerdtree*. I need
+time to tame with this plugin. <br/>
+
+Mapping a specific key to open *NERDTree*: <br/>
+`nnoremap <Space>n :NERDTree<CR>` <br/>
+Thanks to this line I can open *nerdtree* by pressing `space` and `n`. 
+
+Project website: https://github.com/preservim/nerdtree <br/>
+On the project website you'll find more info about plugin and a few intresting
+informations such as "How do I open NERDTree automatically when Vim starts?" or
+"How can I close Vim automatically when NERDTree is the last window?".
 
 ### Other settings
 
@@ -234,9 +250,7 @@ set colorcolumn=80
 ```
 
 Set line numbering: <br/>
-```
-set number
-```
+`set number`
 
 
 
