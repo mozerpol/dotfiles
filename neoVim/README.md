@@ -295,6 +295,20 @@ add: <br/>
 
 Project page: https://github.com/plasticboy/vim-markdown
 
+### Supertab
+Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs (:help ins-completion).
+
+##### How to install
+Add `Plug 'ervandew/supertab'` to *init.vim* and `:PlugInstall`, like in every
+plugin.
+
+##### What did I use
+Just press `Tab` and see the prompt. <br/>
+I think, *supertab* is very small feature, so I didn't find any intresting option
+(for) me to personalize.
+
+Project page: https://github.com/ervandew/supertab
+
 ### Other settings
 Set the vertical line to position 80: <br/>
 ```
