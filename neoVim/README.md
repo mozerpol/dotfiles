@@ -264,6 +264,37 @@ This plugin is very small (I think), so I added only one line: `let g:rainbow_ac
 
 Project page: https://github.com/luochen1990/rainbow
 
+### Vim Markdown
+Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
+
+##### How to install
+You must add two lines to init.vim: <br/>
+```
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+```
+And after this of course `:PlugInstall`.
+
+##### What did I use
+In the basic version of this plugin we get folding (I mean something like line
+wrapping), but nicer is option "fold in a style like python-mode": <br/>
+`let g:vim_markdown_folding_style_pythonic = 1`
+
+Also for me is more comfortable to change folding level. We can set six grades,
+default is first grade. It means that our file will be fold to maximum, every
+title (such as: #, ##, ###, ####...) will be fold. To change this use: <br/>
+`let g:vim_markdown_folding_level = 6`.
+
+For me very annoying is syntax concealing. Explanation from main page of this
+repo: "For example, conceal [link text](link url) as just link text. Also, _italic_ and *italic* will conceal to just italic. Similarly __bold__, **bold**, ___italic bold___, and ***italic bold*** will conceal to just bold, bold, italic bold, and italic bold respectively."To disable syntax concealing: <br/>
+`let g:vim_markdown_conceal = 0`
+
+Also sometimes annoying for me is auto insert bulletpoints, to disable this feature
+add: <br/>
+`let g:vim_markdown_auto_insert_bullets = 0`
+
+Project page: https://github.com/plasticboy/vim-markdown
+
 ### Other settings
 Set the vertical line to position 80: <br/>
 ```
