@@ -241,8 +241,30 @@ On the project website you'll find more info about plugin and a few intresting
 informations such as "How do I open NERDTree automatically when Vim starts?" or
 "How can I close Vim automatically when NERDTree is the last window?".
 
-### Other settings
+## TODO:
+### vim-devicons
+Adds filetype-specific icons to *nerdtree*, *vim-airline* and more.
 
+##### How to install
+Add to *init.vim* file `Plug 'ryanoasis/vim-devicons'` and `:PlugInstall`. <br/>
+And very important info: "Always load the vim-devicons as the very last one".
+
+
+Project page: https://github.com/ryanoasis/vim-devicons
+
+### Rainbow Parentheses Improved
+This plugin will help you read these codes by showing different levels of
+parentheses in different colors. 
+
+##### How to install
+Add `Plug 'luochen1990/rainbow'` and `:PlugInstall`. <br/>
+
+##### Whad did I use
+This plugin is very small (I think), so I added only one line: `let g:rainbow_active = 1`.
+
+Project page: https://github.com/luochen1990/rainbow
+
+### Other settings
 Set the vertical line to position 80: <br/>
 ```
 highlight ColorColumn ctermbg=gray
