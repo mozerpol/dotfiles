@@ -24,7 +24,7 @@ It is obvious, the dir for config is different.
 
 Vim has other modes, like Visual, Select, and Ex-Mode, more [here](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes).
 
-### *vim-plug*
+### vim-plug
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
 to install plugins.
 
@@ -61,7 +61,7 @@ init.vim. Open Nvim and use :PlugClean to uninstall plugins)
 
 Project website: `https://github.com/junegunn/vim-plug`
 
-### *vim-airline*
+### vim-airline
 *vim-airline* is a status bar, which can be customized. <br/>
 
 ##### How to install? <br/>
@@ -74,20 +74,47 @@ To add more themes put in *init.vim* line
 `Plugin 'vim-airline/vim-airline-themes'` and install it. <br/>
 
 ##### What did I use
-Thanks to `'vim-airline/vim-airline-themes'` I can use `let g:airline_theme='minimalist'`, which is nice
-theme :D <br/>
-Put line `let g:airline_theme='minimalist'` **after** (not between)
-`call plug#end()`.
+Thanks to `'vim-airline/vim-airline-themes'` I can use a *minimalist* theme: <br/>
+`let g:airline_theme='minimalist'`, which imo is nice theme :D <br/>
+So you must put line: <br/>
+`let g:airline_theme='minimalist'` <br/>
+**after** (not between) `call plug#end()`.
 
-Also we can put line `let g:airline#extensions#tabline#enabled = 1` <br/>
-Thanks to this we'll see in upper bar status about tabs.
+To see upper status bar about tabs add line: <br/>
+`let g:airline#extensions#tabline#enabled = 1`
 
-Additional options for *airline*:
-- enable modified detection: `let g:airline_detect_modified=:1`
-- enable paste detection: `let g:airline_detect_paste=1`
-- enable spell detection: `let g:airline_detect_spell=1`
-- display spelling language when spell detection is enabled: 
+Enable modified detection: <br/>
+`let g:airline_detect_modified=:1`
+
+Enable paste detection: <br/>
+`let g:airline_detect_paste=1`
+
+Enable spell detection: <br/>
+`let g:airline_detect_spell=1`
+
+Display spelling language when spell detection is enabled: <br/>
 `let g:airline_detect_spelllang=1`
+
+For the nice looking powerline symbols to appear, you will need to install a 
+patched appropriate fonts. To do it go to: https://github.com/powerline/fonts (it's)
+*powerline/fonts* on github and follow the instruction, so to install fonts: <br/>
+`sudo apt install fonts-powerline` in terminal. <br/>
+And also you must fulfill two steps, first (copy from repo page): <br/>
+"In some distributions, *Terminess Powerline* is ignored by default and must be
+explicitly allowed. A fontconfig file is provided which enables it. Copy 
+[this](https://github.com/powerline/fonts/blob/master/fontconfig/50-enable-terminess-powerline.conf)
+file from the fontconfig directory to your home folder under *~/.config/fontconfig/conf.d*
+(create it if it doesn't exist) and run `fc-cache -vf`." <br/>
+Socond very important step is turning on fixed width font from terminal. I'm using
+*MATE Terminal* (same as gnome terminal), so to do it: <br/>
+*Edit* --> *Profile Preferences* --> In window *Editing Profile <name of ur profile>* 
+--> Uncheck *Use the system fixed width font* --> Font (in my case) *Monospace Regular 12* 
+
+Also to see nice icons in your status bar add these lines to your init.vim: <br/>
+```
+
+```
+
 
 Project website: https://github.com/vim-airline/vim-airline
 
@@ -95,7 +122,8 @@ Project website: https://github.com/vim-airline/vim-airline
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
 
 ##### How to install
-Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
+Just paste `Plug 'jiangmiao/auto-pairs'` to `~/.config/nvim/init.vim` between
+`call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
 And of course install.
 
 ##### What did I use
