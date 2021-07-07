@@ -142,8 +142,29 @@ let g:airline_symbols.linenr = ''
 If everything must work add line: <br/> 
 `let g:airline_powerline_fonts = 1`
 
+Turning off section *x*: <br/>
+`let g:airline_section_x = 0`
+
+Turning off section *y*: <br/>
+`let g:airline_section_y = 0`
+
+Set in section *Z* position in file, like this: *row/totalRows:column*: <br/>
+`let g:airline_section_z = airline#section#create(['%l/%L:%c'])`
 
 Project website: https://github.com/vim-airline/vim-airline
+
+### fugitive.vim
+Fugitive is the Vim plugin for Git. <br/>
+
+##### How to install
+Add  `Plug 'tpope/vim-fugitive'` and `:PlugInstall` <br/>
+
+##### What did I use
+Generally this plugin is extensive with many possibilities. However, I only use
+only one feature, it's showing git branch and its status on the bottom status bar. <br/>
+So after installation this plugin (in my case) everything will be done automatically.
+
+Project website: https://github.com/tpope/vim-fugitive
 
 ### auto-pairs
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
