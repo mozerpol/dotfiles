@@ -1,11 +1,31 @@
 ![logo](https://neovim.io/images/logo@2x.png) 
 
 ---
-### How to install neovim:
+
+### Table of contents <a name="tof"></a>
+1. [How to install neovim](#howto)
+2. [Important directories/files](#important)
+3. [Modes in vim/nvim](#modes)
+4. [vim-plug](#vim-plug)
+5. [vim-airline](vim-airline)
+6. [fugitive.vim](#fugi)
+7. [auto-pairs](#auto)
+8. [Yggdroot/indentLine](#indend)
+9. [lukas-reineke/indent-blankline.nvim](#lukas)
+10. [folke/tokyonight.nvim](#folke)
+11. [NERDTree](#nerd)
+12. [vim-devicons](#vim-dev)
+13. [Rainbow Parentheses Improved](#rainbow)
+14. [Vim Markdown](#vim-mark)
+15. [Supertab](#supertab)
+16. [Other settings](#other)
+17. [Most important shortcuts](#shortcuts)
+
+### How to install neovim: <a name="howto"></a> [UP↑](#tof)
 `sudo apt install neovim` <br/>
 For all plugins to correct work you need neovim version > 0.5. <br/>
 
-### Important directories/files:
+### Important directories/files: <a name="important"></a> [UP↑](#tof)
 If they (folders and files) don't exist, create them.
 1. *~/.config/nvim* - main folder.
 2. *~/.config/nvim/init.vim* - config file.
@@ -14,7 +34,7 @@ If they (folders and files) don't exist, create them.
 After changing user (can be root for example) nvim looks different. 
 It is obvious, the dir for config is different.
 
-### Modes in vim/nvim
+### Modes in vim/nvim <a name="modes"></a> [UP↑](#tof)
 
 |**Mode**|**Description**|
 |:--:|:--:|
@@ -24,7 +44,7 @@ It is obvious, the dir for config is different.
 
 Vim has other modes, like Visual, Select, and Ex-Mode, more [here](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes).
 
-### vim-plug
+### vim-plug <a name="vim-plug"></a> [UP↑](#tof)
 After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
 to install plugins.
 
@@ -61,7 +81,7 @@ init.vim. Open Nvim and use :PlugClean to uninstall plugins)
 
 Project website: `https://github.com/junegunn/vim-plug`
 
-### vim-airline
+### vim-airline <a name="vim-airline"></a> [UP↑](#tof)
 *vim-airline* is a status bar, which can be customized. <br/>
 
 ##### How to install? <br/>
@@ -106,7 +126,7 @@ explicitly allowed. A fontconfig file is provided which enables it. Copy
 file from the fontconfig directory to your home folder under *~/.config/fontconfig/conf.d*
 (create it if it doesn't exist) and run `fc-cache -vf`." <br/>
 Socond very important step is turning on fixed width font from terminal. I'm using
-*MATE Terminal* (same as gnome terminal), so to do it: <br/>
+*MATE Terminal* (same as gnome terminal), so to do it: <br/> 
 *Edit* --> *Profile Preferences* --> In window *Editing Profile <name of ur profile>* 
 --> Uncheck *Use the system fixed width font* --> Font (in my case) *Monospace Regular 12* 
 
@@ -153,7 +173,7 @@ Set in section *Z* position in file, like this: *row/totalRows:column*: <br/>
 
 Project website: https://github.com/vim-airline/vim-airline
 
-### fugitive.vim
+### fugitive.vim <a name="fugi"></a> [UP↑](#tof)
 Fugitive is the Vim plugin for Git. <br/>
 
 ##### How to install
@@ -166,7 +186,7 @@ So after installation this plugin (in my case) everything will be done automatic
 
 Project website: https://github.com/tpope/vim-fugitive
 
-### auto-pairs
+### auto-pairs <a name="auto"></a> [UP↑](#tof)
 Automatic quote and bracket completion is doing by *'jiangmiao/auto-pairs'*. <br/>
 
 ##### How to install
@@ -178,7 +198,7 @@ And of course install.
 
 Project website: https://github.com/jiangmiao/auto-pairs
 
-### Yggdroot/indentLine 
+### Yggdroot/indentLine <a name="indent"></a> [UP↑](#tof)
 At the beggining I thought this plugin would be a good choice. It is very popular,
 but I had a big problem. I doesn't show colors of indent in blank line. So I
 decided to use another one, which I describe below. Anyway I started describe this, so
@@ -249,7 +269,7 @@ To change color for tab indents use: <br/>
 
 Project website: https://github.com/Yggdroot/indentLine
 
-### lukas-reineke/indent-blankline.nvim
+### lukas-reineke/indent-blankline.nvim  <a name="lukas"></a> [UP↑](#tof)
 This is impoved version of *Yggdroot/indentLine*. Thanks to this, we can see 
 vertical indentations for spaces, tabs and also for empty lines. <br/>
 
@@ -277,7 +297,7 @@ with only appearance. <br/>
 
 Project website: https://github.com/lukas-reineke/indent-blankline.nvim
 
-### 'folke/tokyonight.nvim'
+### folke/tokyonight.nvim <a name="folke"></a> [UP↑](#tof)
 A dark and light Neovim theme ported from the Visual Studio Code TokyoNight theme.
 
 ##### How to install
@@ -293,7 +313,7 @@ This turn on a *tokyonight* colorscheme, which for me is nice.
 
 Project website: https://github.com/folke/tokyonight.nvim 
 
-### NERDTree
+### NERDTree <a name="nerd"></a> [UP↑](#tof)
 The NERDTree is a file system explorer for the Vim editor. <br/>
 To use, just write `:NERDTree`.
 
@@ -318,7 +338,7 @@ informations such as "How do I open NERDTree automatically when Vim starts?" or
 "How can I close Vim automatically when NERDTree is the last window?".
 
 ## TODO:
-### vim-devicons
+### vim-devicons  <a name="vim-dev"></a> [UP↑](#tof)
 Adds filetype-specific icons to *nerdtree*, *vim-airline* and more.
 
 ##### How to install
@@ -328,7 +348,7 @@ And very important info: "Always load the vim-devicons as the very last one".
 
 Project page: https://github.com/ryanoasis/vim-devicons
 
-### Rainbow Parentheses Improved
+### Rainbow Parentheses Improved  <a name="rainbow"></a> [UP↑](#tof)
 This plugin will help you read these codes by showing different levels of
 parentheses in different colors. 
 
@@ -340,7 +360,7 @@ This plugin is very small (I think), so I added only one line: `let g:rainbow_ac
 
 Project page: https://github.com/luochen1990/rainbow
 
-### Vim Markdown
+### Vim Markdown  <a name="vim-mark"></a> [UP↑](#tof)
 Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
 
 ##### How to install
@@ -371,7 +391,7 @@ add: <br/>
 
 Project page: https://github.com/plasticboy/vim-markdown
 
-### Supertab
+### Supertab  <a name="supertab"></a> [UP↑](#tof)
 Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs (:help ins-completion).
 
 ##### How to install
@@ -385,7 +405,7 @@ I think, *supertab* is very small feature, so I didn't find any intresting optio
 
 Project page: https://github.com/ervandew/supertab
 
-### Other settings
+### Other settings  <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
 ```
 highlight ColorColumn ctermbg=gray
@@ -395,10 +415,7 @@ set colorcolumn=80
 Set line numbering: <br/>
 `set number`
 
-
-
-
-### Most important shortcuts
+### Most important shortcuts <a name="shortcuts"></a> [UP↑](#tof)
 
 | Shortcut | Meaning |
 |--|:--|
