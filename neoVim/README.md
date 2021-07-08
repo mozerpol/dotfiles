@@ -21,6 +21,31 @@
 16. [Other settings](#other)
 17. [The most important shortcuts](#shortcuts)
 
+||
+|:--:|
+| ![image](https://user-images.githubusercontent.com/43972902/124953523-8679db00-e015-11eb-9cd5-791e2082a336.png) |
+| *Main window after setting up my neovim config.* |
+
+||
+|:--:|
+|![image](https://user-images.githubusercontent.com/43972902/124954052-fbe5ab80-e015-11eb-8486-8a1f6c37fff1.png)|
+| *NeoVim based on my own config with NERDTree.* |
+
+||
+|:--:|
+|![image](https://user-images.githubusercontent.com/43972902/124954308-3a7b6600-e016-11eb-99ca-baadda841548.png)|
+|*NeoVim + NERDTree + youtube in cli (also of course I'm using tmux).* |
+
+||
+|:--:|
+| ![image](https://user-images.githubusercontent.com/43972902/124955659-811d9000-e017-11eb-9fd7-9aa1760a542a.png) |
+| *NeoVim + NERDTree + youtube in cli + README of NeoVim config in w3m web browser (also in cli).* |
+
+||
+|:--:|
+| ![image](https://user-images.githubusercontent.com/43972902/124954775-bbd2f880-e016-11eb-9f89-b46bec46416e.png) |
+| *Almost the same as above, but NeoVim displays the same file, which is shown by w3m.* |
+
 ### How to install neovim: <a name="howto"></a> [UP↑](#tof)
 `sudo apt install neovim` <br/>
 For all plugins to correct work you need neovim version > 0.5. <br/>
