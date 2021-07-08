@@ -1,6 +1,17 @@
 ## mps-youtube
 Project website: https://github.com/mps-youtube/mps-youtube <br/>
 Project is based on *mps*, uses YouTube as a source of content and can play and download video as well as audio. <br/>
+
+||
+|:--:|
+|![image](https://user-images.githubusercontent.com/43972902/124945862-d73a0580-e00e-11eb-8f69-e61ec36c574a.png)|
+|*The main window of my terminal after searching in the mps-youtube.*|
+
+||
+|:--:|
+|![image](https://user-images.githubusercontent.com/43972902/124946893-ad351300-e00f-11eb-87fb-893de5728068.png)|
+|*Playing song with video inside tmux (playing music videos is optional).*|
+
 Initially I had a lot of problems, due to setting appropriate path (to check path run `echo $PATH`) to python and dependencies. Also important thing
 was setting api_key. <br/>
 After running `mpsyt` I had an error:
