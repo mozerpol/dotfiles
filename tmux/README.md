@@ -1,15 +1,19 @@
 ### About
-*Tmux* is a terminal multiplexer, which can start a *Tmux* session and then open multiple windows inside that session. Each window occupies the entire screen and can be split into rectangular panes.
+*Tmux* is a terminal multiplexer, which can start a *Tmux* session and then
+open multiple windows inside that session. Each window occupies the entire 
+screen and can be split into rectangular panes.
 
 Project website: https://github.com/tmux/tmux
 
 ### How to install and start
 To install *Tmux* run `apt install tmux` <br/>
 Starting tmux session: `tmux`. <br/>
-All commands in *Tmux* start with a prefix, which by default is `ctrl + b`, for example to get a list of all commands: `ctrl + b` and after this press `?`. <br/>
+All commands in *Tmux* start with a prefix, which by default is `ctrl + b`, 
+for example to get a list of all commands: `ctrl + b` and after this press `?`.
 
 ### Most important shortcuts
-By default, Tmux sessions are named numerically. To create a new named session, run: `tmux new -s session_name` <br/>
+By default, Tmux sessions are named numerically. To create a new named session,
+run: `tmux new -s session_name` <br/>
 Detach from Tmux and return to normal shell: `ctrl + b` and `d` <br/>
 List of the Tmux sessions: `tmux ls` <br/>
 Attach session: `tmux attach-session -t name_of_session_or_number` <br/>
@@ -20,11 +24,12 @@ Split current panel horizontally: `ctrl + b` and `%` <br/>
 Split current panel vertically: `ctrl + b` and `"` <br/>
 Go to the next panel: `ctrl + b` and `o` <br/>
 Toggle between the current and previous panel: `ctrl + b` and `;` <br/>
-Close the current panel: `ctrl + b` and `x` <br/>
+Close the current panel: `ctrl + b` and `x`.
 
 ##### Copy - Paste
 Enter *copy mode*: `ctrl + b` and `[` <br/>
-Then use the arrow keys to go to the position from where you want to start copying. <br/>
+Then use the arrow keys to go to the position from where you want to start 
+copying. <br/>
 `ctrl + space` to start copying. <br/>
 Save marked text: `ctrl + w` <br/>
 Paste the selected text: `ctrl + b` and `]` 
@@ -32,7 +37,8 @@ Paste the selected text: `ctrl + b` and `]`
 ### Customizing 
 *Tmux* reads its configuration from `~/.tmux.conf` <br/>
 If config doesn't exist, you can create it. <br/>
-To install plugins: `ctrl + shift + i`, but in this project I'm not using any plugin for tmux.
+To install plugins: `ctrl + shift + i`, but in this project I'm not using any
+plugin for tmux.
 
 Reload config using `ctrl + b` and `r`: <br/>
 ```
@@ -44,8 +50,11 @@ Open in new split tab .tmux.conf: `ctrl + b` and `shift + m`: <br/>
 bind-key M split-window -h "nvim ~/.tmux.conf"
 ```
 
-Thanks to mouse mode we can select windows and different panels by clicking on them and what is very important (for me) we can resize panles! <br/>
-```set -g mouse on``` <br/>
+Thanks to mouse mode we can select windows and different panels by clicking on 
+them and what is very important (for me) we can resize panles! <br/>
+```
+set -g mouse on
+```
 
 Change color of inactive/active window: <br/>
 ```
@@ -107,9 +116,8 @@ set -g status-fg colour248
 
 # Change selection color
 set -wg mode-style fg=colour138
+
+# Allow vim to use its background color
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",*256col*:Tc"
 ```
-
-
-
-
-
