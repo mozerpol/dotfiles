@@ -7,10 +7,10 @@
 2. [Important directories/files](#important)
 3. [Modes in vim/nvim](#modes)
 4. [vim-plug](#vim-plug)
-5. [vim-airline](vim-airline)
+5. [vim-airline](#vim-airline)
 6. [fugitive.vim](#fugi)
 7. [auto-pairs](#auto)
-8. [Yggdroot/indentLine](#indend)
+8. [Yggdroot/indentLine](#inde)
 9. [lukas-reineke/indent-blankline.nvim](#lukas)
 10. [folke/tokyonight.nvim](#folke)
 11. [NERDTree](#nerd)
@@ -129,7 +129,6 @@ Socond very important step is turning on fixed width font from terminal. I'm usi
 *MATE Terminal* (same as gnome terminal), so to do it: <br/> 
 *Edit* --> *Profile Preferences* --> In window *Editing Profile <name of ur profile>* 
 --> Uncheck *Use the system fixed width font* --> Font (in my case) *Monospace Regular 12* 
-
 Also to see nice icons in your status bar add these lines to your init.vim: <br/>
 ```
 if !exists('g:airline_symbols')
@@ -198,7 +197,7 @@ And of course install.
 
 Project website: https://github.com/jiangmiao/auto-pairs
 
-### Yggdroot/indentLine <a name="indent"></a> [UP↑](#tof)
+### Yggdroot/indentLine <a name="inde"></a> [UP↑](#tof)
 At the beggining I thought this plugin would be a good choice. It is very popular,
 but I had a big problem. I doesn't show colors of indent in blank line. So I
 decided to use another one, which I describe below. Anyway I started describe this, so
