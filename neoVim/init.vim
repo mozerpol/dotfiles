@@ -1,103 +1,89 @@
-" Plugins List
-call plug#begin('~/.config/nvim/bundle')  
- 
-    " UI related
-    " color scheme for neovim
-    Plug 'christkempson/base16-vim'
-    " statusline at the bottom
-    Plug 'vim-airline/vim-airline'
-    " draw vertical lines at each indentation level for code indented with spaces
-    Plug 'Yggdroot/indentLine'
-    
-    " syntax check
-    " syntax checking and semantic errors, while edit file and return errors
-    Plug 'w0rp/ale'
-    
-    " Autocomplete
-    " asynchronous completion support for diffrent languages
-    Plug 'ncm2/ncm2'
-    " Donno what do this, may return any text in nvim statusbar
-    Plug 'roxma/nvim-yarp'
-    " use words from current buffer for completion
-    Plug 'ncm2/ncm2-bufword'
-    "
-    Plug 'ncm2/ncm2-path'
-    " python completion
-    Plug 'ncm2/ncm2-jedi'
-    " Automatic quote and bracket completion
-	Plug 'jiangmiao/auto-pairs'
-    " Formater
-    Plug 'Chiel92/vim-autoformat'
-    
-    " Addons
-    " provide file sustem explorter
-    Plug 'scrooloose/nerdTree'
+" For more info see the README.md file
 
+" Installation by Vim-Plug
+call plug#begin('~/.local/share/nvim/plugged')
+	Plug 'davidhalter/jedi-vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'folke/tokyonight.nvim'
+	Plug 'preservim/nerdtree'
+	Plug 'luochen1990/rainbow'
+	Plug 'godlygeek/tabular'
+	Plug 'plasticboy/vim-markdown'
+	Plug 'ervandew/supertab'
+	Plug 'tpope/vim-fugitive'
+	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-" The result is that when a file is edited its indent and plugin file is loaded
-filetype plugin indent on
+" vim-airline 
+let g:airline_theme='minimalist'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_detect_spell = 1
+let g:airline_detect_spelllang = 1
+let g:airline_detect_paste = 1
+let g:airline_detect_modified = 1
+let g:airline_powerline_fonts = 1
+let g:airline_section_x = 0
+let g:airline_section_y = 0 
+let g:airline_section_z = airline#section#create(['%l/%L:%c'])
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-" Configurations Part
-" UI configuration
-" Syntax Highlighting
-syntax on
-syntax enable
-
-" colorscheme
-let base16colorspace=256
-colorscheme base16-gruvbox-dark-hard
-set background=dark
-" True Color Support if it's avaiable in terminal
-if has("termguicolors")
-    set termguicolors
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
 endif
-"if has("gui_running")
-"  set guicursor=n-v-c-sm:block,i-ci-ve:block,r-cr-o:blocks
-"endif
-" set line numbering
+
+" unicode symbols for vim-airline
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" vim-airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" lukas-reineke/indent-blankline.nvim 
+let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
+let g:indent_blankline_indent_level = 10 
+let g:indent_blankline_show_first_indent_level = v:true 
+let g:indent_blankline_show_trailing_blankline_indent = v:false
+
+" folke/tokyonight.nvim
+colorscheme tokyonight
+
+" NERDTree
+nnoremap <Space>n :NERDTree<CR>
+
+" luochen1990/rainbow
+let g:rainbow_active = 1
+
+" plasticboy/vim-markdown 
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_level = 2
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_auto_insert_bullets = 0
+
+" Other settings
+set colorcolumn=80
 set number
-set relativenumber
-set mouse=a
-set noshowmode
-set noshowmatch
-set nolazyredraw
-" Turn off backup
-set nobackup
-set noswapfile
-set nowritebackup
-" Search configuration
-set ignorecase                    " ignore case when searching
-set smartcase                     " turn on smartcase
-" Tab and Indent configuration
-set expandtab
+set encoding=UTF-8
 set tabstop=4
 set shiftwidth=4
-" vim-autoformat with flake8
-noremap <F3> :Autoformat<CR>
-" Thanks to this u can use nerdTree, to do this press ctrl+n
-nmap <C-n> :NERDTreeToggle<CR> 
-" NCM2
-augroup NCM2
-  autocmd!
-  " enable ncm2 for all buffers
-  autocmd BufEnter * call ncm2#enable_for_buffer()
-  " :help Ncm2PopupOpen for more information
-  set completeopt=noinsert,menuone,noselect
-  " When the <Enter> key is pressed while the popup menu is visible, it only
-  " hides the menu. Use this mapping to close the menu and also start a new line.
-  inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-augroup END
-" Ale
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_linters = {'python': ['flake8']}
-" Airline
-let g:airline_left_sep  = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#ale#enabled = 1
-let airline#extensions#ale#error_symbol = 'E:'
-let airline#extensions#ale#warning_symbol = 'W:'
+
+" Own shortcuts
