@@ -19,7 +19,7 @@
 14. [Vim Markdown](#vim-mark)
 15. [Supertab](#supertab)
 16. [Other settings](#other)
-17. [Most important shortcuts](#shortcuts)
+17. [The most important shortcuts](#shortcuts)
 
 ### How to install neovim: <a name="howto"></a> [UP↑](#tof)
 `sudo apt install neovim` <br/>
@@ -170,6 +170,15 @@ Turning off section *y*: <br/>
 Set in section *Z* position in file, like this: *row/totalRows:column*: <br/>
 `let g:airline_section_z = airline#section#create(['%l/%L:%c'])`
 
+Also I had annoying (for me) info in the bottom bar about type of file, I mean
+*utf-8[unix]*, sometimes it can be intresting info, but usually I'm editing 
+*utf-8* files, so to turn off this info, just add: <br/>
+`let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'`
+
+Setting path formatter in the upper bar. Thanks to this we'll get only file 
+name: <br/>
+`let g:airline#extensions#tabline#formatter = 'unique_tail'`
+
 Project website: https://github.com/vim-airline/vim-airline
 
 ### fugitive.vim <a name="fugi"></a> [UP↑](#tof)
@@ -289,7 +298,6 @@ Show first indent level. In my case the first indent level was turned off. To
 turn on use: <br/>
 `let g:indent_blankline_show_first_indent_level = v:true`
 
-
 For this option is much harder to explain without photo. Below option is related 
 with only appearance. <br/>
 `let g:indent_blankline_show_trailing_blankline_indent = v:false`
@@ -308,7 +316,12 @@ comments or *NvimTree* has a darker background. <br/>
 To my config I included only: <br/>
 `colorscheme tokyonight`
 
-This turn on a *tokyonight* colorscheme, which for me is nice. 
+This turn on a *tokyonight* colorscheme, which for me is nice. The default theme
+is *storm*, but very important info. If you want (I'm talking about my personal
+case) see background color from this plugin be careful on *tmux*. <br/>
+More info about this you'll find on my
+[tmux repo](https://github.com/mozerpol/Configs-Settings/tree/master/tmux)
+and here(https://unix.stackexchange.com/questions/197391/background-color-mismatch-in-vim-and-tmux).
 
 Project website: https://github.com/folke/tokyonight.nvim 
 
@@ -336,14 +349,14 @@ On the project website you'll find more info about plugin and a few intresting
 informations such as "How do I open NERDTree automatically when Vim starts?" or
 "How can I close Vim automatically when NERDTree is the last window?".
 
-## TODO:
 ### vim-devicons  <a name="vim-dev"></a> [UP↑](#tof)
 Adds filetype-specific icons to *nerdtree*, *vim-airline* and more.
 
 ##### How to install
 Add to *init.vim* file `Plug 'ryanoasis/vim-devicons'` and `:PlugInstall`. <br/>
-And very important info: "Always load the vim-devicons as the very last one".
-
+And very important info: "Always load the vim-devicons as the very last one". <br/>
+So if you do each step from [here](#vim-airline) you need also install this plugin.
+After this everything should work correct.
 
 Project page: https://github.com/ryanoasis/vim-devicons
 
@@ -406,13 +419,20 @@ Project page: https://github.com/ervandew/supertab
 
 ### Other settings  <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
-```
-highlight ColorColumn ctermbg=gray
-set colorcolumn=80
-```
+`set colorcolumn=80`
 
 Set line numbering: <br/>
 `set number`
+
+Prepare the terminal to show utf-8 encoding: <br/>
+`set encoding=UTF-8`
+
+Size of tab character: <br/>
+`set tabstop=4`
+
+Size indetation after pressing enter: <br/>
+`set shiftwidth=4`
+
 
 ### Most important shortcuts <a name="shortcuts"></a> [UP↑](#tof)
 
