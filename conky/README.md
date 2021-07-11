@@ -49,3 +49,14 @@ Name=conky
 Comment[en_US]=desktop system monitor
 Comment=desktop system monitor
 ```
+
+### conky_old_version.conf
+About ten years ago (± 2012) in high school I made my own config. Unfortunately 
+with newer version of *conky* the syntax has changed. But anyway, I'll post here
+my old config with old screenshot (luckily, I once took a screenshot). <br/>
+So... my old config is called *conky_old_version.conf* <br/>
+Screenshot below: <br/>
+![screemshot](https://user-images.githubusercontent.com/43972902/125206490-dfe94080-e287-11eb-92a2-1340d16c9b29.jpg)
+
+In the screenshot you can see also terminal emulator *tilda* and simple terminal,
+perhaps it was gnome-terminal-something.
