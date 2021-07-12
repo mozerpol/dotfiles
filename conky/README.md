@@ -36,7 +36,7 @@ Inside this folder */etc/xdg/autostart* you will put two files: <br/>
 sleep 10 && conky -b
 ```
 
-*conky-startup.sh* <br/>
+*conky.desktop* <br/>
 ```
 [Desktop Entry]
 Type=Application
@@ -60,3 +60,7 @@ Screenshot below: <br/>
 
 In the screenshot you can see also terminal emulator *tilda* and simple terminal,
 perhaps it was gnome-terminal-something.
+
+### TODO
+Create a new version of my own config using new syntax. I'll do it, but later... 
+;) 
