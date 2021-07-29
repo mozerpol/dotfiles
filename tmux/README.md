@@ -41,29 +41,29 @@ To install plugins: `ctrl + shift + i`, but in this project I'm not using any
 plugin for tmux.
 
 Reload config using `ctrl + b` and `r`: <br/>
-```
+```bash
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 ```
 
 Open in new split tab .tmux.conf: `ctrl + b` and `shift + m`: <br/>
-```
+```bash
 bind-key M split-window -h "nvim ~/.tmux.conf"
 ```
 
 Thanks to mouse mode we can select windows and different panels by clicking on 
 them and what is very important (for me) we can resize panles! <br/>
-```
+```bash
 set -g mouse on
 ```
 
 Change color of inactive/active window: <br/>
-```
+```bash
 set -g window-style 'fg=colour247,bg=colour236'
 set -g window-active-style 'fg=colour250,bg=black'
 ```
 
 Setting the pane border colors: <br/> 
-```
+```bash
 set -g pane-border-style 'fg=colour235,bg=colour238' 
 set -g pane-active-border-style 'fg=colour151,bg=colour238'
 ```
@@ -75,7 +75,7 @@ set -g status-fg colour248
 ```
 
 Change color during selection text: <br/>
-```
+```bash
 set -wg mode-style fg=colour138
 ```
 
@@ -86,7 +86,7 @@ set -wg mode-style fg=colour138
 
 ### Config
 Below is my complete config, which is very modest, but enough for me :) <br/>
-```
+```bash
 # For reload config
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 

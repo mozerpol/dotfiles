@@ -32,12 +32,12 @@ Inside this folder */etc/xdg/autostart* you will put two files: <br/>
 
 ##### Files content:
 *conky-startup.sh*: <br/>
-```
+```bash
 sleep 10 && conky -b
 ```
 
 *conky.desktop* <br/>
-```
+```bash
 [Desktop Entry]
 Type=Application
 Exec=/etc/xdg/autostart/conky-startup.sh

@@ -15,7 +15,7 @@ Project is based on *mps*, uses YouTube as a source of content and can play and 
 Initially I had a lot of problems, due to setting appropriate path (to check path run `echo $PATH`) to python and dependencies. Also important thing
 was setting api_key. <br/>
 After running `mpsyt` I had an error:
-```
+```bash
 Traceback (most recent call last):
   File "/home/mozerpol/.local/lib/python3.7/site-packages/pafy/util.py", line 34, in call_gdata
     data = g.opener.open(url).read().decode('utf-8')

@@ -16,5 +16,5 @@ create a separate folder for them, e.g. *grip*
 Why the name of this repo is *"dotfiles"* not "myconfig" or "settings"? <br/>
 Because is very popular that when we're personalizing various programs, their
 configuration files start from dot. So we can say that config files are
-**dot**-**files**, for example config file for *tmux* will be "***.**tmux.conf*". <br/>
+**dot**-**files**, for example config file for *tmux* will be "**.** *tmux.conf*". <br/>
 Nice article: https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory
