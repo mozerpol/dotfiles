@@ -75,8 +75,9 @@ to install plugins.
 
 ##### How to install
 For neovim: 
-```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ 
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 This command will create config file for plugin *plug.vim* in directory: 
@@ -85,7 +86,7 @@ To use this plugin you must add a few lines to *init.vim*. *init.vim* should
 be in `~/.config/nvim/init.vim`, if you don't have this folders anad file, 
 create them. <br/>
 To *init.vim* add: <br/>
-```
+```vim
 call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'davidhalter/jedi-vim'
 call plug#end()
@@ -155,7 +156,7 @@ Socond very important step is turning on fixed width font from terminal. I'm usi
 *Edit* --> *Profile Preferences* --> In window *Editing Profile <name of ur profile>* 
 --> Uncheck *Use the system fixed width font* --> Font (in my case) *Monospace Regular 12* 
 Also to see nice icons in your status bar add these lines to your init.vim: <br/>
-```
+```vim
 if !exists('g:airline_symbols')
      let g:airline_symbols = {}
 endif
@@ -402,7 +403,7 @@ Syntax highlighting, matching rules and mappings for the original Markdown and e
 
 ##### How to install
 You must add two lines to init.vim: <br/>
-```
+```vim
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 ```
