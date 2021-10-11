@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'lukas-reineke/indent-blankline.nvim'
-	Plug 'folke/tokyonight.nvim'
+ 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 	Plug 'preservim/nerdtree'
 	Plug 'luochen1990/rainbow'
 	Plug 'godlygeek/tabular'
@@ -15,6 +15,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'ervandew/supertab'
 	Plug 'tpope/vim-fugitive'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'dense-analysis/ale'
+	Plug 'vhda/verilog_systemverilog.vim'
 call plug#end()
 
 " vim-airline 
@@ -79,11 +81,21 @@ let g:vim_markdown_folding_level = 2
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_auto_insert_bullets = 0
 
+" dense-analysis/ale
+let g:ale_linters = {
+\ 	'verilog': ['verilator'],
+\}
+let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ }
+let g:ale_echo_msg_format = '%s [%severity%]'
+
 " Other settings
 set colorcolumn=80
 set number
 set encoding=UTF-8
 set tabstop=4
 set shiftwidth=4
+filetype on
 
 " Own shortcuts
