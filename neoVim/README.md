@@ -18,8 +18,10 @@
 13. [Rainbow Parentheses Improved](#rainbow)
 14. [Vim Markdown](#vim-mark)
 15. [Supertab](#supertab)
-16. [Other settings](#other)
-17. [The most important shortcuts](#shortcuts)
+16. [Asynchronous Lint Engine](#ale)
+17. [vhda/verilog_systemverilog.vim](#vhda)
+18. [Other settings](#other)
+19. [The most important shortcuts](#shortcuts)
 
 ||
 |:--:|
@@ -442,6 +444,10 @@ I think, *supertab* is very small feature, so I didn't find any intresting optio
 (for) me to personalize.
 
 Project page: https://github.com/ervandew/supertab
+
+### Asynchronous Lint Engine <a name="ale"></a> [UP↑](#tof)
+
+### vhda/verilog_systemverilog.vim <a name="vhda"></a> [UP↑](#tof)
 
 ### Other settings  <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
