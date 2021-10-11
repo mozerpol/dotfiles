@@ -1,4 +1,4 @@
-![logo](https://neovim.io/images/logo@2x.png) 
+![logo](https://neovim.io/images/logo@2x.png)
 
 ---
 
@@ -58,7 +58,7 @@ If they (folders and files) don't exist, create them.
 2. *~/.config/nvim/init.vim* - config file.
 3. *~/.local/share/nvim* - for plug-vim purposes.
 
-After changing user (can be root for example) nvim looks different. 
+After changing user (can be root for example) nvim looks different.
 It is obvious, the dir for config is different.
 
 ### Modes in vim/nvim <a name="modes"></a> [UP↑](#tof)
@@ -72,20 +72,20 @@ It is obvious, the dir for config is different.
 Vim has other modes, like Visual, Select, and Ex-Mode, more [here](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes).
 
 ### vim-plug <a name="vim-plug"></a> [UP↑](#tof)
-After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier 
+After *nvim* instalation, install the *Vim-plug Plugin Manager* to make it easier
 to install plugins.
 
 ##### How to install
-For neovim: 
+For neovim:
 ```bash
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-This command will create config file for plugin *plug.vim* in directory: 
+This command will create config file for plugin *plug.vim* in directory:
 *~/.local/share/nvim/site/autoload/plug.vim*. <br/>
-To use this plugin you must add a few lines to *init.vim*. *init.vim* should 
-be in `~/.config/nvim/init.vim`, if you don't have this folders anad file, 
+To use this plugin you must add a few lines to *init.vim*. *init.vim* should
+be in `~/.config/nvim/init.vim`, if you don't have this folders anad file,
 create them. <br/>
 To *init.vim* add: <br/>
 ```vim
@@ -94,7 +94,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 call plug#end()
 ```
 
-After this steps you should run *neovim* by `nvim` command and inside neovim 
+After this steps you should run *neovim* by `nvim` command and inside neovim
 run `:PlugInstall` <br/>
 This command will create folder *jedi-vim* with config file for this plugin in
 dir *~/.local/share/nvim/plugged*. <br/>
@@ -113,10 +113,10 @@ Project website: `https://github.com/junegunn/vim-plug`
 *vim-airline* is a status bar, which can be customized. <br/>
 
 ##### How to install? <br/>
-To `~/.config/nvim/init.vim` add `Plug 'vim-airline/vim-airline'`, between 
+To `~/.config/nvim/init.vim` add `Plug 'vim-airline/vim-airline'`, between
 `call plug#begin('~/.local/share/nvim/plugged')` and `call plug#end()`. <br/>
-Next run *nvim* and type `:PlugInstall`. <br/> 
-After this in dir `/home/mozerpol/.local/share/nvim/plugged` will be create 
+Next run *nvim* and type `:PlugInstall`. <br/>
+After this in dir `/home/mozerpol/.local/share/nvim/plugged` will be create
 folder *vim-airline* with necessary files. <br/>
 To add more themes put in *init.vim* line
 `Plugin 'vim-airline/vim-airline-themes'` and install it. <br/>
@@ -143,20 +143,20 @@ Enable spell detection: <br/>
 Display spelling language when spell detection is enabled: <br/>
 `let g:airline_detect_spelllang=1`
 
-For the nice looking powerline symbols to appear, you will need to install a 
+For the nice looking powerline symbols to appear, you will need to install a
 patched appropriate fonts. To do it go to: https://github.com/powerline/fonts (it's)
 *powerline/fonts* on github and follow the instruction, so to install fonts: <br/>
 `sudo apt install fonts-powerline` in terminal. <br/>
 And also you must fulfill two steps, first (copy from repo page): <br/>
 "In some distributions, *Terminess Powerline* is ignored by default and must be
-explicitly allowed. A fontconfig file is provided which enables it. Copy 
+explicitly allowed. A fontconfig file is provided which enables it. Copy
 [this](https://github.com/powerline/fonts/blob/master/fontconfig/50-enable-terminess-powerline.conf)
 file from the fontconfig directory to your home folder under *~/.config/fontconfig/conf.d*
 (create it if it doesn't exist) and run `fc-cache -vf`." <br/>
 Socond very important step is turning on fixed width font from terminal. I'm using
-*MATE Terminal* (same as gnome terminal), so to do it: <br/> 
-*Edit* --> *Profile Preferences* --> In window *Editing Profile <name of ur profile>* 
---> Uncheck *Use the system fixed width font* --> Font (in my case) *Monospace Regular 12* 
+*MATE Terminal* (same as gnome terminal), so to do it: <br/>
+*Edit* --> *Profile Preferences* --> In window *Editing Profile <name of ur profile>*
+--> Uncheck *Use the system fixed width font* --> Font (in my case) *Monospace Regular 12*
 Also to see nice icons in your status bar add these lines to your init.vim: <br/>
 ```vim
 if !exists('g:airline_symbols')
@@ -186,7 +186,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 ```
 
-If everything must work add line: <br/> 
+If everything must work add line: <br/>
 `let g:airline_powerline_fonts = 1`
 
 Turning off section *x*: <br/>
@@ -199,11 +199,11 @@ Set in section *Z* position in file, like this: *row/totalRows:column*: <br/>
 `let g:airline_section_z = airline#section#create(['%l/%L:%c'])`
 
 Also I had annoying (for me) info in the bottom bar about type of file, I mean
-*utf-8[unix]*, sometimes it can be intresting info, but usually I'm editing 
+*utf-8[unix]*, sometimes it can be intresting info, but usually I'm editing
 *utf-8* files, so to turn off this info, just add: <br/>
 `let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'`
 
-Setting path formatter in the upper bar. Thanks to this we'll get only file 
+Setting path formatter in the upper bar. Thanks to this we'll get only file
 name: <br/>
 `let g:airline#extensions#tabline#formatter = 'unique_tail'`
 
@@ -239,8 +239,8 @@ At the beggining I thought this plugin would be a good choice. It is very popula
 but I had a big problem. I doesn't show colors of indent in blank line. So I
 decided to use another one, which I describe below. Anyway I started describe this, so
 I'll save it, becuse it's my hard work ;) <br/>
-So... About *Yggdroot/indentLine*, which I ultimately didn't use. <br/> 
-This plugin is for displaying vertical lines at each indentation level for code 
+So... About *Yggdroot/indentLine*, which I ultimately didn't use. <br/>
+This plugin is for displaying vertical lines at each indentation level for code
 indented with spaces. This plugin not support indentations with tabs, because
 you can just use `set list lcs=tab:\¦\ `.
 
@@ -268,7 +268,7 @@ int main()
 	{
 		return 1;
 	}
-	
+
 	return 0;
 }
 ```
@@ -306,7 +306,7 @@ To change color for tab indents use: <br/>
 Project website: https://github.com/Yggdroot/indentLine
 
 ### lukas-reineke/indent-blankline.nvim  <a name="lukas"></a> [UP↑](#tof)
-This is impoved version of *Yggdroot/indentLine*. Thanks to this, we can see 
+This is impoved version of *Yggdroot/indentLine*. Thanks to this, we can see
 vertical indentations for spaces, tabs and also for empty lines. <br/>
 
 ##### How to install
@@ -326,7 +326,7 @@ Show first indent level. In my case the first indent level was turned off. To
 turn on use: <br/>
 `let g:indent_blankline_show_first_indent_level = v:true`
 
-For this option is much harder to explain without photo. Below option is related 
+For this option is much harder to explain without photo. Below option is related
 with only appearance. <br/>
 `let g:indent_blankline_show_trailing_blankline_indent = v:false`
 
@@ -351,15 +351,15 @@ More info about this you'll find on my
 [tmux repo](https://github.com/mozerpol/Configs-Settings/tree/master/tmux)
 and here(https://unix.stackexchange.com/questions/197391/background-color-mismatch-in-vim-and-tmux).
 
-Project website: https://github.com/folke/tokyonight.nvim 
+Project website: https://github.com/folke/tokyonight.nvim
 
 ### NERDTree <a name="nerd"></a> [UP↑](#tof)
 The NERDTree is a file system explorer for the Vim editor. <br/>
 To use, just write `:NERDTree`.
 
 ##### How to install
-To install: `Plug 'preservim/nerdtree'` and `:PlugInstall`. 
-After installing *NERDTree*, the best way to learn it is to turn on the 
+To install: `Plug 'preservim/nerdtree'` and `:PlugInstall`.
+After installing *NERDTree*, the best way to learn it is to turn on the
 Quick Help. Open *NERDTree* with the `:NERDTree` command, and press `?` to turn
 on the Quick Help.
 
@@ -370,7 +370,7 @@ time to tame with this plugin. <br/>
 
 Mapping a specific key to open *NERDTree*: <br/>
 `nnoremap <Space>n :NERDTree<CR>` <br/>
-Thanks to this line I can open *nerdtree* by pressing `space` and `n`. 
+Thanks to this line I can open *nerdtree* by pressing `space` and `n`.
 
 Project website: https://github.com/preservim/nerdtree <br/>
 On the project website you'll find more info about plugin and a few intresting
@@ -390,7 +390,7 @@ Project page: https://github.com/ryanoasis/vim-devicons
 
 ### Rainbow Parentheses Improved  <a name="rainbow"></a> [UP↑](#tof)
 This plugin will help you read these codes by showing different levels of
-parentheses in different colors. 
+parentheses in different colors.
 
 ##### How to install
 Add `Plug 'luochen1990/rainbow'` and `:PlugInstall`. <br/>
@@ -446,6 +446,44 @@ I think, *supertab* is very small feature, so I didn't find any intresting optio
 Project page: https://github.com/ervandew/supertab
 
 ### Asynchronous Lint Engine <a name="ale"></a> [UP↑](#tof)
+ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking
+and semantic errors) while you edit your text files.
+
+##### How to install
+Add Plug `'dense-analysis/ale'` to *init.vim* and `:PlugInstall`, like in every
+plugin.
+
+##### What did I use
+I'm using (at this moment) *ALE* for Verilog language, so below part of my vim
+config conern just this language. To everything should work correct, you must
+install *verilator*. It's open source verilog simulator. Source page:
+https://www.veripool.org/verilator/ <br/>
+To install verilator at linux just `apt install verilator`, package should be
+in repo by default. <br/>
+I added three things: <br/>
+```vim
+let g:ale_linters = {                                                           
+\   'verilog': ['verilator'],                                                   
+\} 
+```
+
+This backslashes look a bit wired, but are necessary. Above part is about
+linter for verilog. The next thing: <br/>
+```vim
+let g:ale_fixers = {                                                            
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],                            
+\ } 
+```
+
+This part of code is for command `:ALEFix`, which delete unncessary whitespaces
+and empty lines, for all types of code (because we have `*` - it means all
+type of code). The last one is: <br/>
+```vim
+let g:ale_echo_msg_format = '%s [%severity%]'
+```
+
+This part modify output for status bar, which is in left-bottom corner.
+
 
 ### vhda/verilog_systemverilog.vim <a name="vhda"></a> [UP↑](#tof)
 
