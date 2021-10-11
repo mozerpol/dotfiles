@@ -485,7 +485,16 @@ let g:ale_echo_msg_format = '%s [%severity%]'
 This part modify output for status bar, which is in left-bottom corner.
 
 
+Project page: https://github.com/dense-analysis/ale
+
 ### vhda/verilog_systemverilog.vim <a name="vhda"></a> [UP↑](#tof)
+VHDA - Vim Syntax Plugin for Verilog and SystemVerilog. It's a quite big tool, 
+but I'm using only a small part - identation, which are based on context. 
+
+##### How to install
+Just as everything: `Plug 'vhda/verilog_systemverilog.vim'`
+
+Project page: https://github.com/vhda/verilog_systemverilog.vim
 
 ### Other settings  <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
