@@ -512,6 +512,8 @@ Size of tab character: <br/>
 Size indetation after pressing enter: <br/>
 `set shiftwidth=4`
 
+Vim can detect the type of file that is edited: <br/>
+`filetype on`
 
 ### Most important shortcuts <a name="shortcuts"></a> [UP↑](#tof)
 
