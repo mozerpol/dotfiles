@@ -92,10 +92,12 @@ let g:ale_echo_msg_format = '%s [%severity%]'
 
 " Other settings
 set colorcolumn=80
+:hi ColorColumn guibg=#30364f
 set number
 set encoding=UTF-8
-set tabstop=4
-set shiftwidth=4
+set expandtab
 filetype on
 
 " Own shortcuts
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
