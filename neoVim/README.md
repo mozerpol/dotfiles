@@ -517,6 +517,11 @@ Size of tab character: <br/>
 Size indetation after pressing enter: <br/>
 `set shiftwidth=4`
 
+Change entered tabs to spaces. To change all the existing tab characters to 
+match the current tab settings, use in vim terminal `:retab`. Option to set in
+init.vim: <br/>
+`set expandtab`
+
 Vim can detect the type of file that is edited: <br/>
 `filetype on`
 
