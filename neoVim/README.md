@@ -350,7 +350,7 @@ is *storm*, but very important info. If you want (I'm talking about my personal
 case) see background color from this plugin be careful on *tmux*. <br/>
 More info about this you'll find on my
 [tmux repo](https://github.com/mozerpol/Configs-Settings/tree/master/tmux)
-and here(https://unix.stackexchange.com/questions/197391/background-color-mismatch-in-vim-and-tmux).
+and [here](https://unix.stackexchange.com/questions/197391/background-color-mismatch-in-vim-and-tmux).
 
 Project website: https://github.com/folke/tokyonight.nvim
 
@@ -500,6 +500,10 @@ Project page: https://github.com/vhda/verilog_systemverilog.vim
 ### Other settings  <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
 `set colorcolumn=80`
+
+Color change of vertical line at position 80. Color is in hex value, may this
+value can change more things, but for now everything looks ok. <br/>
+`:hi ColorColumn guibg=#30364f`
 
 Set line numbering: <br/>
 `set number`
