@@ -21,7 +21,8 @@
 16. [Asynchronous Lint Engine](#ale)
 17. [vhda/verilog_systemverilog.vim](#vhda)
 18. [Other settings](#other)
-19. [The most important shortcuts](#shortcuts)
+19. [My own shortcuts](#mos)
+20. [The most important shortcuts](#shortcuts)
 
 ||
 |:--:|
@@ -514,6 +515,14 @@ Size indetation after pressing enter: <br/>
 
 Vim can detect the type of file that is edited: <br/>
 `filetype on`
+
+### My own shortcuts <a name="mos"></a> [UP↑](#tof)
+Below are two shortcuts, which help navigate between cards using *NERDTree*.
+Just select your file, press *t* and from now you can use below shortcuts. <br/>
+```vim
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
+```
 
 ### Most important shortcuts <a name="shortcuts"></a> [UP↑](#tof)
 
