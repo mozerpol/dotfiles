@@ -95,6 +95,8 @@ set colorcolumn=80
 :hi ColorColumn guibg=#30364f
 set number
 set encoding=UTF-8
+set tabstop=3
+set shiftwidth=3
 set expandtab
 filetype on
 
