@@ -1,4 +1,4 @@
-### grip
+### 1. grip
 Render local readme files before sending off to GitHub. <br/>
 Just go to your folder where you have README.md file and run *grip*. Now open
 a browser and visit http://localhost:6419
@@ -7,3 +7,74 @@ a browser and visit http://localhost:6419
 ![Screenshot at 2021-07-09 13-48-51](https://user-images.githubusercontent.com/43972902/125073622-8a146d00-e0bc-11eb-83bc-87efbb67b815.png)
 
 Project page: https://github.com/joeyespo/grip
+
+### 2. VSG - VHDL Style Guide
+Linter with the possibility of correcting errors in the VHDL code. I'm using it
+with vim, but you can use it with any editor. <br/>
+Github page: https://github.com/jeremiah-c-leary/vhdl-style-guide <br/>
+Docs web: https://vhdl-style-guide.readthedocs.io/en/latest/gallery.html
+
+##### How to install?  <br/>
+Go to any dir, e.g *~/Downloads* <br/>
+`git clone https://github.com/jeremiah-c-leary/vhdl-style-guide.git` <br/>
+After this: <br/>
+`sudo python setup.py install`
+
+##### How to use it? <br/>
+Suppose we have such code, which is called *design.vhd*: <br/>
+```VHDL
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity and_gate is port(
+  a: in std_logic;
+  b: in std_logic;
+  c: out std_logic
+);
+end and_gate;
+
+architecture rtl of and_gate is
+  begin
+    process(a, b) is begin
+      c <= a and b;
+    end process;
+end rtl;
+```
+
+Main commands that are used by me: <br/>
+1. `vsg -f file_name.vhd` <br/>
+When we run command in terminal: `vsg -f design.vhd` <br/> we'll receive: <br/>
+![image](https://user-images.githubusercontent.com/43972902/142878727-9a11cfa8-1300-48aa-b6ab-9bc4d869c003.png)
+
+2. `vsg -f file_name.vhd --fix` <br/>
+As previously, suppose we have the same code, which is called *design.vhd*: <br/>
+When we run command in terminal: `vsg -f design.vhd --fix`, we'll receive: <br/>
+![image](https://user-images.githubusercontent.com/43972902/142880123-11348334-524e-495a-956d-30212cf6dca8.png) <br/>
+And code will change to: <br/>
+```VHDL
+library IEEE;
+  use IEEE.std_logic_1164.all;
+
+entity and_gate is port (
+    a : in    std_logic;
+    b : in    std_logic;
+    c : out   std_logic
+  );
+end entity and_gate;
+
+architecture rtl of and_gate is
+
+begin
+
+  process (a, b) is
+  begin
+
+    c <= a and b;
+
+  end process;
+
+end architecture rtl;
+```
+
+Also I found nice website, we can find out more about good practices in VHDL
+[last access date 22.11.2021]: https://g2384.github.io/VHDLFormatter/
