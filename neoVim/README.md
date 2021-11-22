@@ -20,9 +20,10 @@
 15. [Supertab](#supertab)
 16. [Asynchronous Lint Engine](#ale)
 17. [vhda/verilog_systemverilog.vim](#vhda)
-18. [Other settings](#other)
-19. [My own shortcuts](#mos)
-20. [The most important shortcuts](#shortcuts)
+18. [jeremiah-c-leary/vhdl-style-guide](#vsg)
+19. [Other settings](#other)
+20. [My own shortcuts](#mos)
+21. [The most important shortcuts](#shortcuts)
 
 ||
 |:--:|
@@ -463,17 +464,17 @@ To install verilator at linux just `apt install verilator`, package should be
 in repo by default. <br/>
 I added three things: <br/>
 ```vim
-let g:ale_linters = {                                                           
-\   'verilog': ['verilator'],                                                   
-\} 
+let g:ale_linters = {
+\   'verilog': ['verilator'],
+\}
 ```
 
 This backslashes look a bit wired, but are necessary. Above part is about
 linter for verilog. The next thing: <br/>
 ```vim
-let g:ale_fixers = {                                                            
-\ '*': ['remove_trailing_lines', 'trim_whitespace'],                            
-\ } 
+let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ }
 ```
 
 This part of code is for command `:ALEFix`, which delete unncessary whitespaces
@@ -489,8 +490,8 @@ This part modify output for status bar, which is in left-bottom corner.
 Project page: https://github.com/dense-analysis/ale
 
 ### vhda/verilog_systemverilog.vim <a name="vhda"></a> [UP↑](#tof)
-VHDA - Vim Syntax Plugin for Verilog and SystemVerilog. It's a quite big tool, 
-but I'm using only a small part - identation, which are based on context. 
+VHDA - Vim Syntax Plugin for Verilog and SystemVerilog. It's a quite big tool,
+but I'm using only a small part - identation, which are based on context.
 
 ##### How to install
 Just as everything: `Plug 'vhda/verilog_systemverilog.vim'`
@@ -517,13 +518,31 @@ Size of tab character: <br/>
 Size indetation after pressing enter: <br/>
 `set shiftwidth=4`
 
-Change entered tabs to spaces. To change all the existing tab characters to 
+Change entered tabs to spaces. To change all the existing tab characters to
 match the current tab settings, use in vim terminal `:retab`. Option to set in
 init.vim: <br/>
 `set expandtab`
 
 Vim can detect the type of file that is edited: <br/>
 `filetype on`
+
+### jeremiah-c-leary/vhdl-style-guide <a name="vsg"></a> [UP↑](#tof)
+VHDL Style Guide (VSG) provides coding style guide enforcement for VHDL code.
+
+Github page: https://github.com/jeremiah-c-leary/vhdl-style-guide <br/>
+Web page: https://vhdl-style-guide.readthedocs.io/en/latest/overview.html <br/>
+
+I described this tool a little bit
+[here](https://github.com/mozerpol/dotfiles/tree/master/otherFiles#2-vsg---vhdl-style-guide).
+
+It's not a special tool for vim, but thanks to calling commands directly from
+vim, it's nice to use it. I'm using mainly this commands: <br/>
+1. `:!vsg -f design.vhd` <br/>
+![image](https://user-images.githubusercontent.com/43972902/142885091-e114c4e5-6308-4eb4-bd46-c297f7c8167c.png)
+2. `:!vsg -f design.vhd --fix` <br/>
+![image](https://user-images.githubusercontent.com/43972902/142885345-021919cb-5633-46b4-b413-8992a0261f43.png)
+After pressing enter code looks like this: <br/>
+![image](https://user-images.githubusercontent.com/43972902/142885453-dc081117-a9b7-40b5-b799-dcea7e0bfa28.png)
 
 ### My own shortcuts <a name="mos"></a> [UP↑](#tof)
 Below are two shortcuts, which help navigate between cards using *NERDTree*.
