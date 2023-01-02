@@ -23,5 +23,34 @@ Nice article: https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory
 | Tmux |  |
 | ------ |:--:|
 | General shortkeys |  |
-| Start session: | tmux |
-| All commands in Tmux start with a prefix: | ctrl + b |
+| Start session: | `tmux` |
+| All commands in Tmux start with a prefix: | `ctrl + b` |
+| List of all commands: | `ctrl + b` and after this press `?` |
+| Tmux sessions |  |
+| List of the Tmux sessions: | `tmux ls` |
+| Create a new window with shell: | `ctrl + b` and `c` |
+| Choose window from a list: | `ctrl + b` and `w` |
+| Rename the current window: | `ctrl + b` and `,`|
+| Panel management ||
+| Split current panel horizontally: | `ctrl + b` and `%` |
+| Split current panel vertically: | `ctrl + b` and `"` |
+| Go to the next panel: | `ctrl + b` and `o` |
+| Close the current panel: | `ctrl + b` and `x` |
+| Change panels layout: | `ctrl + b` and `space` |
+| Panel is a new window: | `ctrl + b` and `!` |
+| Select window NUMBER: | `ctrl + b` and `number`, eg. `ctrl + b 0` |
+| Focus on active panel (when divided): | `ctrl + b` and `z` |
+| Swap panels: | `ctrl + b` and `{` or `}` |
+| Copying ||
+| Enter copy mode: | `ctrl + b` and `[` then use the arrow keys to go to the position 
+from where you want to start copying. |
+| Enter copy mode: | `ctrl + b` and `[` |
+| Start copyting: | `ctrl + space` |
+| Save marked text: | `ctrl + w` |
+| Paste the selected text: | `ctrl + b` and `]` |
+| trans ||
+| Translate one word: | `trans :en jeden` |
+| Tranlate sentence: | `trans :en "jakieś zdanie"` |
+| grip ||
+| Just only command grip to start server ||
+| | |
