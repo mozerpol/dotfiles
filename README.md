@@ -48,9 +48,37 @@ from where you want to start copying. |
 | Start copyting: | `ctrl + space` |
 | Save marked text: | `ctrl + w` |
 | Paste the selected text: | `ctrl + b` and `]` |
-| trans ||
+| **trans** ||
 | Translate one word: | `trans :en jeden` |
 | Tranlate sentence: | `trans :en "jakieś zdanie"` |
-| grip ||
-| Just only command grip to start server ||
-| | |
+| **grip** ||
+| Start server: | `grip` |
+| **nvim** | |
+| Main shortcuts |  |
+| Moving in the editor | Navigation, instead of arrows: `h`, `j`, `k`, `l` |
+| Insert text before the cursor: | `i` |
+| Insert text from the beginning of the line: | `shift + i` |
+| Append text after the cursor: | `a` |
+| Append text at the end of the line: | `shift + a` |
+| Insert text in a new line below the cursor: | `o` |
+| Insert text in a new line above the cursor: | `shift + o` |
+| Jump to the end if the word: | `w` |
+| Skip forward two words and set cursor at the beginning of next word: | `zw` |
+| Skip forward three words and set cursor on the end of next word: | `3e` |
+| Place the cursor at the top of the document: | `ctrl + g` |
+| Place the cursor at the bottom of the document: | `shift + g` |
+| Writing at the end of the line: | `shift + a` |
+| Writing at the beginning of the line: | `shift + i` |
+| Moves the cursor to the last place you were editing and puts in insert mode: | `gi` |
+| Jumps to the previous place where the cursor recently had been: | `ctrl + o` |
+| Jumps to the next place where the cursor recently had been: | `ctrl + i` |
+| Scroll the current buffer one line up: | `ctrl + e` |
+| Scroll the current buffer one line down: | `ctrl + y` |
+| Set in the middle of the screen: | `zz` |
+| Go to (local) variable definition: | `gd` |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
