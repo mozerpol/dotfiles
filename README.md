@@ -76,6 +76,40 @@ from where you want to start copying. |
 | Scroll the current buffer one line down: | `ctrl + y` |
 | Set in the middle of the screen: | `zz` |
 | Go to (local) variable definition: | `gd` |
+| Copying and deleting |  |
+| Delete sign under cursor: | `x` |
+| Delete the entire word with space after this word and set cursor on first 
+character of the next word: | `dw` |
+| Delete all words to the end of line: | `d$` |
+| Delete the entire word up to space: | `de` |
+| Delete to the end of word, set cursor on the last character of the deleted word: | `ce` |
+| Delete two words: | `d2w` |
+| Delete entire line: | `dd` |
+| Delete two entire lines: | `2dd` |
+| Replace sign under cursor: | `r` |
+| Copy whole line (without visual mode): | `y` |
+| Copy to system clipboard (in visual mode): | `"+y` |
+| Paste: | `p` |
+| Paste what dd action removed: | `p` |
+| Searching and replacing |  |
+| Search forward from cursor: | `/{pattern}` |
+| Search backward from cursor: | `?{pattern}` |
+| Next occurrence of search pattern: | `n` |
+| Previous occurrence of search pattern: | `N` |
+| Replace all matches of a pattern: | `:%s/{pattern}/{string}/` |
+| Replace all matches of a pattern in the selected area (in visual mode): | `:s/{pattern}/{string}` |
+| Search for the exact word under the cursor: | `*` |
+| Others |  |
+| Entering into insert mode: | `i` |
+| Switch to visual mode: | `v` |
+| Execute external command: | `:!<command>` |
+| Redo an undone action: | `ctrl + r` |
+| Shows how many percent of the document has passed: | `ctrl + g` |
+| Shift the line (or selection) one indent to the right: | `>>` |
+| Shift the line (or selection) one indent to the left: | `<<` |
+| Complete the current word under the cursor from the word following it: | `ctrl + n` or `ctrl + p` |
+|  |  |
+|  |  |
 |  |  |
 |  |  |
 |  |  |
