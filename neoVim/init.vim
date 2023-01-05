@@ -17,6 +17,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'dense-analysis/ale'
 	Plug 'vhda/verilog_systemverilog.vim'
+   " Desc later
+   Plug 'SirVer/ultisnips' 
+   Plug 'honza/vim-snippets'
 call plug#end()
 
 " vim-airline 
@@ -103,3 +106,8 @@ filetype on
 " Own shortcuts
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
+
+" Desc later
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
