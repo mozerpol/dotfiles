@@ -108,6 +108,28 @@ character of the next word: | `dw` |
 | Shift the line (or selection) one indent to the right: | `>>` |
 | Shift the line (or selection) one indent to the left: | `<<` |
 | Complete the current word under the cursor from the word following it: | `ctrl + n` or `ctrl + p` |
+| NERDTree |  |
+| Open NERDTree: | `:NERDTree` |
+|  |  |
+|  |  |
+| VHDL snippets  |  |
+| Expand snippet | `tab` |
+| Jump forward inside snippet | `ctrl + b` |
+| Jump backward inside snippet | `ctrl + z` |
+| lib | library ${1} <br>
+use $1.${2}|
+| libs | library IEEE;* <br> *use IEEE.std_logic_1164.ALL;* <br> *use IEEE.numeric_std.ALL; |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
 |  |  |
 |  |  |
 |  |  |
