@@ -4,6 +4,7 @@
 
 ### Table of contents <a name="tof"></a>
 1. [How to install neovim](#howto)
+   1. [Quick installation](#quick)
 2. [Important directories/files](#important)
 3. [Modes in vim/nvim](#modes)
 4. [vim-plug](#vim-plug)
@@ -49,11 +50,23 @@
 | ![image](https://user-images.githubusercontent.com/43972902/124954775-bbd2f880-e016-11eb-9f89-b46bec46416e.png) |
 | *Almost the same as above, but NeoVim displays the same file, which is shown by w3m.* |
 
-### How to install neovim: <a name="howto"></a> [UP↑](#tof)
+### 1. How to install neovim: <a name="howto"></a> [UP↑](#tof)
 `sudo apt install neovim` <br/>
 For all plugins to correct work you need neovim version > 0.5. <br/>
 
-### Important directories/files: <a name="important"></a> [UP↑](#tof)
+#### 1.1 Quick installation
+1. `sudo apt install neovim git-all fonts-powerline python3-pip`
+2. If doesn't exist, create ~/.config/nvim/init.vim
+3. Copy *init.vim* from this repository to *init.vim* in `~/.config/nvim/`
+4. Run `nvim`
+5. Inside neovim `:PlugInstall`
+6. `python3 -m pip install --user --upgrade pynvim`
+7. Download font from: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts, 
+can be e.g. DejaVuSansMono. For linux must be *.tff file.
+8. Copy downloaded font to `/usr/local/share/fonts/` 
+9. `fc-cache -fv`
+
+### 2. Important directories/files: <a name="important"></a> [UP↑](#tof)
 If they (folders and files) don't exist, create them.
 1. *~/.config/nvim* - main folder.
 2. *~/.config/nvim/init.vim* - config file.
