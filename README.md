@@ -52,7 +52,7 @@ Nice article: https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory
 | Tranlate sentence: | `trans :en "jakieś zdanie"` |
 | <h4>3. grip</h4> |  |
 | Start server: | `grip` |
-| <h4>4.nvim</h4> |  |
+| <h4>4. nvim</h4> |  |
 | **Main shortcuts** |  |
 | Moving in the editor | Navigation, instead of arrows: `h`, `j`, `k`, `l` |
 | Insert text before the cursor: | `i` |
@@ -108,6 +108,9 @@ Nice article: https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory
 | Complete the current word under the cursor from the word following it: | `ctrl + n` or `ctrl + p` |
 | **NERDTree** |  |
 | Open NERDTree: | `:NERDTree` |
+| Next tab: | `ctrl + l` |
+| Previous tab: | `ctrl + h` |
+| Open in a new tab: | `t` |
 | **VHDL snippets**  |  |
 | Expand snippet | `tab` |
 | Jump forward inside snippet | `ctrl + b` |
