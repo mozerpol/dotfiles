@@ -10,19 +10,22 @@
 5. [vim-airline/vim-airline](#vim-airline)
 6. [tpope/vim-fugitive](#fugi)
 7. [jiangmiao/auto-pairs](#auto)
-8. [Yggdroot/indentLine](#inde)
-9. [lukas-reineke/indent-blankline.nvim](#lukas)
-10. [folke/tokyonight.nvim](#folke)
-11. [preservim/nerdtree](#nerd)
-12. [vim-devicons](#vim-dev)
-13. [luochen1990/rainbow](#rainbow)
-14. [plasticboy/vim-markdown](#vim-mark)
-15. [ervandew/supertab](#supertab)
-16. [dense-analysis/ale](#ale)
-17. [vhda/verilog_systemverilog.vim](#vhda)
-18. [jeremiah-c-leary/vhdl-style-guide](#vsg)
-19. [Other settings](#other)
-20. [My own shortcuts](#mos)
+8. [lukas-reineke/indent-blankline.nvim](#lukas)
+9. [folke/tokyonight.nvim](#folke)
+10. [preservim/nerdtree](#nerd)
+11. [ryanoasis/vim-devicons](#vim-dev)
+12. [luochen1990/rainbow](#rainbow)
+13. [plasticboy/vim-markdown](#vim-mark)
+14. [ervandew/supertab](#supertab)
+15. [dense-analysis/ale](#ale)
+16. [vhda/verilog_systemverilog.vim](#vhda)
+17. [vim-airline/vim-airline-themes](#vim-themes)
+18. [godlygeek/tabular](#tabular)
+19. [honza/vim-snippets](#vim-snippets)
+20. [SirVer/ultisnips](#ulti)
+21. [VHDL style guide](#vsg)
+22. [Other settings](#other)
+23. [My own shortcuts](#mos)
 
 ||
 |:--:|
@@ -49,7 +52,7 @@
 | ![image](https://user-images.githubusercontent.com/43972902/124954775-bbd2f880-e016-11eb-9f89-b46bec46416e.png) |
 | *Almost the same as above, but NeoVim displays the same file, which is shown by w3m.* |
 
-### Quick installation <a name="quick"></a> [UP↑](#tof)
+### 1. Quick installation <a name="quick"></a> [UP↑](#tof)
 For all plugins to correct work you need neovim version > 0.9.
 
 1. `sudo apt install neovim git-all fonts-powerline python3-pip`
@@ -63,7 +66,7 @@ can be e.g. DejaVuSansMono. For linux must be *.tff file.
 8. Copy downloaded font to `/usr/local/share/fonts/`
 9. `fc-cache -fv`
 
-### Important directories/files: <a name="important"></a> [UP↑](#tof)
+### 2. Important directories/files: <a name="important"></a> [UP↑](#tof)
 If they (folders and files) don't exist, create them.
 1. *~/.config/nvim* - main folder.
 2. *~/.config/nvim/init.vim* - config file.
@@ -72,14 +75,14 @@ If they (folders and files) don't exist, create them.
 After changing user (can be root for example) nvim looks different.
 It is obvious, the dir for config is different.
 
-### Modes in vim/nvim <a name="modes"></a> [UP↑](#tof)
+### 3. Modes in vim/nvim <a name="modes"></a> [UP↑](#tof)
 [WIki](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
 
-### junegunn/vim-plug <a name="vim-plug"></a> [UP↑](#tof)
+### 4. junegunn/vim-plug <a name="vim-plug"></a> [UP↑](#tof)
 *Vim-plug Plugin Manager* makes it easier to install modules. <br/>
 Project website: `https://github.com/junegunn/vim-plug`
 
-### vim-airline/vim-airline <a name="vim-airline"></a> [UP↑](#tof)
+### 5. vim-airline/vim-airline <a name="vim-airline"></a> [UP↑](#tof)
 It is a status bar, which can be customized.
 
 Minimalist theme: <br/>
@@ -150,16 +153,16 @@ Setting path formatter in the upper bar. Thanks to this I'll get only file name:
 
 Project website: https://github.com/vim-airline/vim-airline
 
-### tpope/vim-fugitive <a name="fugi"></a> [UP↑](#tof)
+### 6. tpope/vim-fugitive <a name="fugi"></a> [UP↑](#tof)
 Plugin for Git. <br/>
 I only use showing git branch and its status on the bottom status bar. <br/>
 Project website: https://github.com/tpope/vim-fugitive
 
-### jiangmiao/auto-pairs <a name="auto"></a> [UP↑](#tof)
+### 7. jiangmiao/auto-pairs <a name="auto"></a> [UP↑](#tof)
 Automatic quote and bracket completion. <br/>
 Project website: https://github.com/jiangmiao/auto-pairs
 
-### lukas-reineke/indent-blankline.nvim <a name="lukas"></a> [UP↑](#tof)
+### 8. lukas-reineke/indent-blankline.nvim <a name="lukas"></a> [UP↑](#tof)
 Vertical indentations for spaces, tabs and also for empty lines. <br/>
 
 I sat for four first indent lines different signs. <br/>
@@ -179,7 +182,7 @@ Below option is related with only appearance. <br/>
 
 Project website: https://github.com/lukas-reineke/indent-blankline.nvim
 
-### folke/tokyonight.nvim <a name="folke"></a> [UP↑](#tof)
+### 9. folke/tokyonight.nvim <a name="folke"></a> [UP↑](#tof)
 A dark and light Neovim theme ported from the Visual Studio Code TokyoNight
 theme.
 
@@ -192,7 +195,7 @@ More info about this
 
 Project website: https://github.com/folke/tokyonight.nvim
 
-### preservim/nerdtree <a name="nerd"></a> [UP↑](#tof)
+### 10. preservim/nerdtree <a name="nerd"></a> [UP↑](#tof)
 File system explorer for the Vim editor. <br/>
 To use: `:NERDTree`
 
@@ -202,17 +205,17 @@ To open *nerdtree*: `space` and `n`
 
 Project website: https://github.com/preservim/nerdtree <br/>
 
-### vim-devicons <a name="vim-dev"></a> [UP↑](#tof)
+### 11. ryanoasis/vim-devicons <a name="vim-dev"></a> [UP↑](#tof)
 Adds filetype-specific icons to *nerdtree*, *vim-airline* and more. <br/>
 Project page: https://github.com/ryanoasis/vim-devicons
 
-### luochen1990/rainbow <a name="rainbow"></a> [UP↑](#tof)
+### 12. luochen1990/rainbow <a name="rainbow"></a> [UP↑](#tof)
 Shows different levels of parentheses in different colors. <br/>
 Turn on: `let g:rainbow_active = 1`.
 
 Project page: https://github.com/luochen1990/rainbow
 
-### plasticboy/vim-markdown <a name="vim-mark"></a> [UP↑](#tof)
+### 13. plasticboy/vim-markdown <a name="vim-mark"></a> [UP↑](#tof)
 Syntax highlighting, matching rules and mappings for the original Markdown and
 extensions.
 
@@ -231,14 +234,14 @@ Turn off auto insert bulletpoints: <br/>
 
 Project page: https://github.com/plasticboy/vim-markdown
 
-### ervandew/supertab <a name="supertab"></a> [UP↑](#tof)
+### 14. ervandew/supertab <a name="supertab"></a> [UP↑](#tof)
 Allows to use <Tab> for all insert completion needs (:help ins-completion).
 <br/>
 Press `Tab` and see the prompt.
 
 Project page: https://github.com/ervandew/supertab
 
-### dense-analysis/ale <a name="ale"></a> [UP↑](#tof)
+### 15. dense-analysis/ale <a name="ale"></a> [UP↑](#tof)
 ALE (Asynchronous Lint Engine) providing linting (syntax checking and semantic
 errors) while you edit your text files.
 
@@ -270,13 +273,35 @@ let g:ale_echo_msg_format = '%s [%severity%]'
 
 Project page: https://github.com/dense-analysis/ale
 
-### vhda/verilog_systemverilog.vim <a name="vhda"></a> [UP↑](#tof)
+### 16. vhda/verilog_systemverilog.vim <a name="vhda"></a> [UP↑](#tof)
 VHDA - Vim Syntax Plugin for Verilog and SystemVerilog. It's a quite big tool,
 but I'm using only identation, which are based on context.
 
 Project page: https://github.com/vhda/verilog_systemverilog.vim
 
-### Other settings <a name="other"></a> [UP↑](#tof)
+### 17. vim-airline/vim-airline-themes <a name="vim-themes"></a> [UP↑](#tof)
+Themes for vim-airline.
+
+Project page: https://github.com/vim-airline/vim-airline-themes
+
+### 18. godlygeek/tabular <a name="tabular"></a> [UP↑](#tof)
+Plugin for aligning text. <br/>
+How to use it: http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+
+Project page: https://github.com/godlygeek/tabular
+
+### 19. honza/vim-snippets <a name="vim-snippets"></a> [UP↑](#tof)
+Snippets for many languages.
+
+Project page: https://github.com/honza/vim-snippets
+
+### 20. SirVer/ultisnips <a name="ulti"></a> [UP↑](#tof)
+Snippets for VHDL.
+
+Project page: https://ghonza/vim-snippetshonza/vim-snippetsithub.com/SirVer/ultisnips
+
+
+### 21. Other settings <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
 `set colorcolumn=80`
 
@@ -302,7 +327,8 @@ match the current tab settings, use in vim terminal `:retab`.<br/>
 Vim can detect the type of file that is edited: <br/>
 `filetype on`
 
-### jeremiah-c-leary/vhdl-style-guide <a name="vsg"></a> [UP↑](#tof)
+### 22. vhdl-style-guide <a name="vsg"></a> [UP↑](#tof)
+It's not module for VIM. <br/>
 VHDL Style Guide (VSG) provides coding style guide enforcement for VHDL code.
 
 Github page: https://github.com/jeremiah-c-leary/vhdl-style-guide <br/>
@@ -315,7 +341,7 @@ I'm using mainly this commands:
 1. `:!vsg -f design.vhd`
 2. `:!vsg -f design.vhd --fix`
 
-### My own shortcuts <a name="mos"></a> [UP↑](#tof)
+### 23. My own shortcuts <a name="mos"></a> [UP↑](#tof)
 Navigate between cards using *NERDTree*. Select file in NeoVim, press *t* and
 now you can use below shortcuts. <br/>
 ```vim
