@@ -3,23 +3,22 @@
 ---
 
 ### Table of contents <a name="tof"></a>
-1. [How to install neovim](#howto)
-   1. [Quick installation](#quick)
+1. [Quick installation](#quick)
 2. [Important directories/files](#important)
 3. [Modes in vim/nvim](#modes)
-4. [vim-plug](#vim-plug)
-5. [vim-airline](#vim-airline)
-6. [fugitive.vim](#fugi)
-7. [auto-pairs](#auto)
+4. [junegunn/vim-plug](#vim-plug)
+5. [vim-airline/vim-airline](#vim-airline)
+6. [tpope/vim-fugitive](#fugi)
+7. [jiangmiao/auto-pairs](#auto)
 8. [Yggdroot/indentLine](#inde)
 9. [lukas-reineke/indent-blankline.nvim](#lukas)
 10. [folke/tokyonight.nvim](#folke)
-11. [NERDTree](#nerd)
+11. [preservim/nerdtree](#nerd)
 12. [vim-devicons](#vim-dev)
-13. [Rainbow Parentheses Improved](#rainbow)
-14. [Vim Markdown](#vim-mark)
-15. [Supertab](#supertab)
-16. [Asynchronous Lint Engine](#ale)
+13. [luochen1990/rainbow](#rainbow)
+14. [plasticboy/vim-markdown](#vim-mark)
+15. [ervandew/supertab](#supertab)
+16. [dense-analysis/ale](#ale)
 17. [vhda/verilog_systemverilog.vim](#vhda)
 18. [jeremiah-c-leary/vhdl-style-guide](#vsg)
 19. [Other settings](#other)
@@ -50,7 +49,7 @@
 | ![image](https://user-images.githubusercontent.com/43972902/124954775-bbd2f880-e016-11eb-9f89-b46bec46416e.png) |
 | *Almost the same as above, but NeoVim displays the same file, which is shown by w3m.* |
 
-### 1 Quick installation
+### Quick installation <a name="quick"></a> [UP↑](#tof)
 For all plugins to correct work you need neovim version > 0.9.
 
 1. `sudo apt install neovim git-all fonts-powerline python3-pip`
@@ -64,7 +63,7 @@ can be e.g. DejaVuSansMono. For linux must be *.tff file.
 8. Copy downloaded font to `/usr/local/share/fonts/`
 9. `fc-cache -fv`
 
-### 2. Important directories/files: <a name="important"></a> [UP↑](#tof)
+### Important directories/files: <a name="important"></a> [UP↑](#tof)
 If they (folders and files) don't exist, create them.
 1. *~/.config/nvim* - main folder.
 2. *~/.config/nvim/init.vim* - config file.
@@ -76,11 +75,11 @@ It is obvious, the dir for config is different.
 ### Modes in vim/nvim <a name="modes"></a> [UP↑](#tof)
 [WIki](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
 
-### vim-plug <a name="vim-plug"></a> [UP↑](#tof)
+### junegunn/vim-plug <a name="vim-plug"></a> [UP↑](#tof)
 *Vim-plug Plugin Manager* makes it easier to install modules. <br/>
 Project website: `https://github.com/junegunn/vim-plug`
 
-### vim-airline <a name="vim-airline"></a> [UP↑](#tof)
+### vim-airline/vim-airline <a name="vim-airline"></a> [UP↑](#tof)
 It is a status bar, which can be customized.
 
 Minimalist theme: <br/>
@@ -151,7 +150,7 @@ Setting path formatter in the upper bar. Thanks to this I'll get only file name:
 
 Project website: https://github.com/vim-airline/vim-airline
 
-### fugitive.vim <a name="fugi"></a> [UP↑](#tof)
+### tpope/vim-fugitive <a name="fugi"></a> [UP↑](#tof)
 Plugin for Git. <br/>
 I only use showing git branch and its status on the bottom status bar. <br/>
 Project website: https://github.com/tpope/vim-fugitive
@@ -160,7 +159,7 @@ Project website: https://github.com/tpope/vim-fugitive
 Automatic quote and bracket completion. <br/>
 Project website: https://github.com/jiangmiao/auto-pairs
 
-### lukas-reineke/indent-blankline.nvim  <a name="lukas"></a> [UP↑](#tof)
+### lukas-reineke/indent-blankline.nvim <a name="lukas"></a> [UP↑](#tof)
 Vertical indentations for spaces, tabs and also for empty lines. <br/>
 
 I sat for four first indent lines different signs. <br/>
@@ -193,7 +192,7 @@ More info about this
 
 Project website: https://github.com/folke/tokyonight.nvim
 
-### NERDTree <a name="nerd"></a> [UP↑](#tof)
+### preservim/nerdtree <a name="nerd"></a> [UP↑](#tof)
 File system explorer for the Vim editor. <br/>
 To use: `:NERDTree`
 
@@ -203,17 +202,17 @@ To open *nerdtree*: `space` and `n`
 
 Project website: https://github.com/preservim/nerdtree <br/>
 
-### vim-devicons  <a name="vim-dev"></a> [UP↑](#tof)
+### vim-devicons <a name="vim-dev"></a> [UP↑](#tof)
 Adds filetype-specific icons to *nerdtree*, *vim-airline* and more. <br/>
 Project page: https://github.com/ryanoasis/vim-devicons
 
-### Rainbow Parentheses Improved  <a name="rainbow"></a> [UP↑](#tof)
+### luochen1990/rainbow <a name="rainbow"></a> [UP↑](#tof)
 Shows different levels of parentheses in different colors. <br/>
 Turn on: `let g:rainbow_active = 1`.
 
 Project page: https://github.com/luochen1990/rainbow
 
-### Vim Markdown  <a name="vim-mark"></a> [UP↑](#tof)
+### plasticboy/vim-markdown <a name="vim-mark"></a> [UP↑](#tof)
 Syntax highlighting, matching rules and mappings for the original Markdown and
 extensions.
 
@@ -232,15 +231,15 @@ Turn off auto insert bulletpoints: <br/>
 
 Project page: https://github.com/plasticboy/vim-markdown
 
-### Supertab  <a name="supertab"></a> [UP↑](#tof)
-Allows to use <Tab> for all insert completion needs (:help ins-completion). 
+### ervandew/supertab <a name="supertab"></a> [UP↑](#tof)
+Allows to use <Tab> for all insert completion needs (:help ins-completion).
 <br/>
 Press `Tab` and see the prompt.
 
 Project page: https://github.com/ervandew/supertab
 
-### Asynchronous Lint Engine <a name="ale"></a> [UP↑](#tof)
-ALE (Asynchronous Lint Engine) providing linting (syntax checking and semantic 
+### dense-analysis/ale <a name="ale"></a> [UP↑](#tof)
+ALE (Asynchronous Lint Engine) providing linting (syntax checking and semantic
 errors) while you edit your text files.
 
 I'm using (at this moment) *ALE* for Verilog language, so below part of my vim
@@ -277,7 +276,7 @@ but I'm using only identation, which are based on context.
 
 Project page: https://github.com/vhda/verilog_systemverilog.vim
 
-### Other settings  <a name="other"></a> [UP↑](#tof)
+### Other settings <a name="other"></a> [UP↑](#tof)
 Set the vertical line to position 80: <br/>
 `set colorcolumn=80`
 
