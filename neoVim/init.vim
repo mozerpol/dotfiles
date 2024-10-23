@@ -2,27 +2,25 @@
 
 " Installation by Vim-Plug
 call plug#begin('~/.local/share/nvim/plugged')
-	Plug 'davidhalter/jedi-vim'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'lukas-reineke/indent-blankline.nvim'
- 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-	Plug 'preservim/nerdtree'
-	Plug 'luochen1990/rainbow'
-	Plug 'godlygeek/tabular'
-	Plug 'plasticboy/vim-markdown'
-	Plug 'ervandew/supertab'
-	Plug 'tpope/vim-fugitive'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'dense-analysis/ale'
-	Plug 'vhda/verilog_systemverilog.vim'
-   " Desc later
-   Plug 'SirVer/ultisnips' 
+   Plug 'vim-airline/vim-airline'
+   Plug 'vim-airline/vim-airline-themes'
+   Plug 'jiangmiao/auto-pairs'
+   Plug 'lukas-reineke/indent-blankline.nvim'
+   Plug 'folke/tokyonight.nvim'
+   Plug 'preservim/nerdtree'
+   Plug 'luochen1990/rainbow'
+   Plug 'godlygeek/tabular'
+   Plug 'plasticboy/vim-markdown'
+   Plug 'ervandew/supertab'
+   Plug 'tpope/vim-fugitive'
+   Plug 'ryanoasis/vim-devicons'
+   Plug 'dense-analysis/ale'
+   Plug 'vhda/verilog_systemverilog.vim'
+   Plug 'SirVer/ultisnips'
    Plug 'honza/vim-snippets'
 call plug#end()
 
-" vim-airline 
+" vim-airline
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_detect_spell = 1
@@ -31,7 +29,7 @@ let g:airline_detect_paste = 1
 let g:airline_detect_modified = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_x = 0
-let g:airline_section_y = 0 
+let g:airline_section_y = 0
 let g:airline_section_z = airline#section#create(['%l/%L:%c'])
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -63,10 +61,10 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-" lukas-reineke/indent-blankline.nvim 
+" lukas-reineke/indent-blankline.nvim
 let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
-let g:indent_blankline_indent_level = 10 
-let g:indent_blankline_show_first_indent_level = v:true 
+let g:indent_blankline_indent_level = 10
+let g:indent_blankline_show_first_indent_level = v:true
 let g:indent_blankline_show_trailing_blankline_indent = v:false
 
 " folke/tokyonight.nvim
@@ -78,7 +76,7 @@ nnoremap <Space>n :NERDTree<CR>
 " luochen1990/rainbow
 let g:rainbow_active = 1
 
-" plasticboy/vim-markdown 
+" plasticboy/vim-markdown
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_folding_level = 2
 let g:vim_markdown_conceal = 0
