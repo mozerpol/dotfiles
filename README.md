@@ -1,5 +1,4 @@
 ## Configs-Settings
-List the most important for me shortcuts.
 _____________
 
 1. [*Conky*](https://github.com/mozerpol/Configs-Settings/tree/master/conky) -
@@ -15,6 +14,8 @@ create a separate folder for them, e.g. *grip*
 youtube in cli
 6. [*tmux*](https://github.com/mozerpol/Configs-Settings/tree/master/tmux) -
 terminal multiplexer
+7. Folder *system_setup* with a simple script which helps me to automatize
+configuration of a fresh system
 
 Nice article why this repo is *"dotfiles"*:
 https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory
