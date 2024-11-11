@@ -1,0 +1,14 @@
+1. Go to intel fpga download center
+   Can be: https://www.intel.com/content/www/us/en/software-kit/750646/questa-intel-fpgas-standard-edition-software-version-21-1.html
+2. Find: Questa*-Intel® FPGAs Standard Edition Software Version 21.1
+3. Download
+   It is not necessary to create an account.
+4. chmod +wx QuestaSetup-...
+5. During installation select Questa - Intel FPGA Starter Edition
+6. Request a license file from the Self-Service Licensing Center
+   Register there, you have to use phone with Microsoft Authenticator app
+7. Generate license for
+   ip addr show     example a1:cb:b2:04:34:56 <---- add to license without ":"
+8. Licesne comes to e-mail
+9. Add to ~/.bashrc:
+   export LM_LICENSE_FILE="dir_to/license.dat" 
