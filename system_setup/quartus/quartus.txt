@@ -1,0 +1,9 @@
+1. Go to intel fpga download center
+   Can be: https://www.intel.com/content/www/us/en/collections/products/fpga/software/downloads.html
+2. Find: Quartus Prime 19.1 Lite Edition for Linux
+3. Download
+   It is not necessary to create an account.
+4. Unpack
+5. Run ./setup.sh
+   Run script Without sudo.
+6. During installation don't select ModelSim, it must be installed separately.
