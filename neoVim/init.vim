@@ -2,10 +2,11 @@
 
 " Installation by Vim-Plug
 call plug#begin('~/.local/share/nvim/plugged')
+   Plug 'ryanoasis/vim-devicons'
    Plug 'vim-airline/vim-airline'
    Plug 'vim-airline/vim-airline-themes'
    Plug 'jiangmiao/auto-pairs'
-   Plug 'lukas-reineke/indent-blankline.nvim'
+   Plug 'Yggdroot/indentLine'
    Plug 'folke/tokyonight.nvim'
    Plug 'preservim/nerdtree'
    Plug 'luochen1990/rainbow'
@@ -13,7 +14,6 @@ call plug#begin('~/.local/share/nvim/plugged')
    Plug 'plasticboy/vim-markdown'
    Plug 'ervandew/supertab'
    Plug 'tpope/vim-fugitive'
-   Plug 'ryanoasis/vim-devicons'
    Plug 'dense-analysis/ale'
    Plug 'vhda/verilog_systemverilog.vim'
    Plug 'SirVer/ultisnips'
@@ -61,11 +61,10 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-" lukas-reineke/indent-blankline.nvim
-let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
-let g:indent_blankline_indent_level = 10
-let g:indent_blankline_show_first_indent_level = v:true
-let g:indent_blankline_show_trailing_blankline_indent = v:false
+" Yggdroot/indentLine
+let g:indentLine_setColors = 0
+let g:indentLine_enabled = 1
+let g:indentLine_char_list = ['|', '┆', '¦', '┊']
 
 " folke/tokyonight.nvim
 colorscheme tokyonight

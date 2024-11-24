@@ -10,7 +10,7 @@
 5. [vim-airline/vim-airline](#vim-airline)
 6. [tpope/vim-fugitive](#fugi)
 7. [jiangmiao/auto-pairs](#auto)
-8. [lukas-reineke/indent-blankline.nvim](#lukas)
+8. [Yggdroot/indentLine](#lukas)
 9. [folke/tokyonight.nvim](#folke)
 10. [preservim/nerdtree](#nerd)
 11. [ryanoasis/vim-devicons](#vim-dev)
@@ -162,25 +162,22 @@ Project website: https://github.com/tpope/vim-fugitive
 Automatic quote and bracket completion. <br/>
 Project website: https://github.com/jiangmiao/auto-pairs
 
-### 8. lukas-reineke/indent-blankline.nvim <a name="lukas"></a> [UP↑](#tof)
+### 8. Yggdroot/indentLine <a name="lukas"></a> [UP↑](#tof)
 Vertical indentations for spaces, tabs and also for empty lines. <br/>
 
 I sat for four first indent lines different signs. <br/>
 First vertical indentation: `|` <br/>
 Second vertical indentation: `¦` <br/>
 Third... etc: <br/>
-`let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']`
+`let g:indentLine_char_list = ['|', '┆', '¦', '┊']`
 
-Show up to ten level indents: <br/>
-`let g:indent_blankline_indent_level = 10`
+Turn on indents: <br/>
+`let g:indentLine_enabled`
 
-To turn on the first indent level: <br/>
-`let g:indent_blankline_show_first_indent_level = v:true`
+Overwrite 'conceal' color with grey by default. : <br/>
+`let g:indentLine_setColors = 1`
 
-Below option is related with only appearance. <br/>
-`let g:indent_blankline_show_trailing_blankline_indent = v:false`
-
-Project website: https://github.com/lukas-reineke/indent-blankline.nvim
+Project website: https://github.com/Yggdroot/indentLine
 
 ### 9. folke/tokyonight.nvim <a name="folke"></a> [UP↑](#tof)
 A dark and light Neovim theme ported from the Visual Studio Code TokyoNight
