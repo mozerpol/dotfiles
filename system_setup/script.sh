@@ -115,7 +115,7 @@ function check_internet_connection()
 	echo "--------------------------------------------"
 	echo ">   [5/14] Checking internet connection    <"
 	echo "--------------------------------------------"
-	
+
     echo -e "GET http://google.com HTTP/1.0\n\n" | nc google.com 80 > /dev/null 2>&1
 
     if [ $? -eq 0 ]; then
@@ -208,6 +208,22 @@ function install_packages()
 	echo ">                net-tools                 <"
 	echo "--------------------------------------------"
 	yes | sudo nala install net-tools
+	echo "--------------------------------------------"
+	echo ">                autoconf                  <"
+	echo "--------------------------------------------"
+	yes | sudo nala install autoconf
+	echo "--------------------------------------------"
+	echo ">                automake                  <"
+	echo "--------------------------------------------"
+	yes | sudo nala install automake
+	echo "--------------------------------------------"
+	echo ">                 libtool                  <"
+	echo "--------------------------------------------"
+	yes | sudo nala install libtool
+	echo "--------------------------------------------"
+	echo ">                intltool                  <"
+	echo "--------------------------------------------"
+	yes | sudo nala install intltool
 }
 
 
@@ -285,7 +301,7 @@ function configure_fonts()
 	if [ ! -d ~/.fonts ]; then
 		mkdir ~/.fonts
 	fi
-	
+
 	cp ./DejaVuSansMNerdFont-Bold.ttf ~/.fonts
 	if [ ! -f ~/.fonts/DejaVuSansMNerdFont-Bold.ttf ]; then
 		echo "ERROR: Fonts are not in ~/.fonts"
@@ -303,13 +319,13 @@ function configure_nvim()
 	echo "--------------------------------------------"
 	echo ">        [12/14] Configuring neovim        <"
 	echo "--------------------------------------------"
-	
+
     python3 -m pip install --user --upgrade pynvim --break-system-packages
-	
+
 	if [ ! -d ~/.config/nvim/ ]; then
 		mkdir ~/.config/nvim/
 	fi
-	
+
 	cp init.vim ~/.config/nvim/
 
 	if [ ! -f ~/.config/nvim/init.vim ]; then
@@ -319,7 +335,7 @@ function configure_nvim()
 	    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 		       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	fi
-	
+
 	echo "----> OK"
 }
 
@@ -404,6 +420,22 @@ function verify_packages()
 		echo "ERROR: the net-tools package was not installed"
 		error_counter=error_counter+1
 	fi
+	if [[ $(dpkg -s autoconf) !=  *"autoconf"* ]]; then
+		echo "ERROR: the autoconf package was not installed"
+		error_counter=error_counter+1
+	fi
+	if [[ $(dpkg -s automake) !=  *"automake"* ]]; then
+		echo "ERROR: the automake package was not installed"
+		error_counter=error_counter+1
+	fi
+	if [[ $(dpkg -s libtool) !=  *"libtool"* ]]; then
+		echo "ERROR: the libtool package was not installed"
+		error_counter=error_counter+1
+	fi
+	if [[ $(dpkg -s intltool) !=  *"intltool"* ]]; then
+		echo "ERROR: the intltool package was not installed"
+		error_counter=error_counter+1
+	fi
 	if [[ $error_counter = 0 ]]; then
 		echo "----> OK"
 		echo ""
@@ -421,7 +453,7 @@ function verify_packages()
 	    echo "ERROR: the number of packages that were not installed: " $error_counter
 	    echo ""
 		echo ""
-	fi	
+	fi
 }
 
 
