@@ -224,6 +224,10 @@ function install_packages()
 	echo ">                intltool                  <"
 	echo "--------------------------------------------"
 	yes | sudo nala install intltool
+	echo "--------------------------------------------"
+	echo ">                  lsd                     <"
+	echo "--------------------------------------------"
+	yes | sudo nala install lsd
 }
 
 
@@ -259,6 +263,7 @@ function add_to_path()
 
 	if [ -f /home/$("whoami")/.bashrc ]; then
 		echo "" >> /home/$("whoami")/.bashrc
+		echo "alias ls='lsd'" >> /home/$("whoami")/.bashrc
 		echo "export PATH="/sbin:/home/$("whoami")/.local/bin:$PATH"" >> /home/$("whoami")/.bashrc
 		echo "----> OK"
 	else
@@ -432,7 +437,7 @@ function verify_packages()
 		echo "ERROR: the libtool package was not installed"
 		error_counter=error_counter+1
 	fi
-	if [[ $(dpkg -s intltool) !=  *"intltool"* ]]; then
+	if [[ $(dpkg -s lsd) !=  *"lsd"* ]]; then
 		echo "ERROR: the intltool package was not installed"
 		error_counter=error_counter+1
 	fi
