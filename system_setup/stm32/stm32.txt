@@ -1,0 +1,3 @@
+Script written for STM32 NUCLEO with STM32F446RET6 MCU.
+chmod +x script.sh
+sudo ./script.sh
