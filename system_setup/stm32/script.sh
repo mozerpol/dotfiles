@@ -34,6 +34,12 @@ function install_packages()
 	yes | sudo nala install cmake
 	# OpenOCD (Open On-Chip Debugger) is a tool that allows to program and debug
 	# STM32 microcontroller.
+	
+	echo "--------------------------------------------"
+	echo ">               stlink-tools               <"
+	echo "--------------------------------------------"
+	yes | sudo nala install stlink-tools
+	# An open source toolset to program and debug STM32 devices
 }
 
 function verify_packages()
@@ -58,6 +64,10 @@ function verify_packages()
 	fi
 	if [[ $(cmake --version) !=  *"cmake"* ]]; then
 		echo "ERROR: the cmake package was not installed"
+		error_counter=error_counter+1
+	fi
+	if [[ $(st-info --version) !=  *"v1"* ]]; then
+		echo "ERROR: the stlink-tools package was not installed"
 		error_counter=error_counter+1
 	fi
 	
