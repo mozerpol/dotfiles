@@ -29,13 +29,6 @@ function install_packages()
 	# STM32 microcontroller.
 	
 	echo "--------------------------------------------"
-	echo ">                  cmake                   <"
-	echo "--------------------------------------------"
-	yes | sudo nala install cmake
-	# OpenOCD (Open On-Chip Debugger) is a tool that allows to program and debug
-	# STM32 microcontroller.
-	
-	echo "--------------------------------------------"
 	echo ">               stlink-tools               <"
 	echo "--------------------------------------------"
 	yes | sudo nala install stlink-tools
@@ -60,10 +53,6 @@ function verify_packages()
 	fi
 	if [[ $(gdb-multiarch --version) !=  *"GNU gdb"* ]]; then
 		echo "ERROR: the gdb-multiarch package was not installed"
-		error_counter=error_counter+1
-	fi
-	if [[ $(cmake --version) !=  *"cmake"* ]]; then
-		echo "ERROR: the cmake package was not installed"
 		error_counter=error_counter+1
 	fi
 	if [[ $(st-info --version) !=  *"v1"* ]]; then
